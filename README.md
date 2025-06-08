@@ -19,9 +19,39 @@ Note that this code writes out the average population-weighted temp for all sub-
 ### Estimating the fit between RTOs and temperature
 This code is in RTO_polynomial_fit.py; it takes demand from the /demand directory and temperatures from the /weighted_temps and does the regression for each RTO. Note that you can set the degree of the polynomial. This program lets you set which year (2023, 2024) you're using for the fit and the degrees of the fit (cubic, 4th order, ...).
 
-It saves plots in the /plots directory and writes out the fit in the polynomial_fits_RTO.json file.
+It saves plots in the /plots directory and writes out the fit in the polynomial_fits_RTO_yyyy_degreeX.json file.
 
 The demand and price data are from [the EIA website](https://www.eia.gov/electricity/wholesalemarkets/index.php). There are bash scripts in the /demand and /price directories to download the relevant files.
+
+### GridStatus.io Data Downloads
+This project includes a code for downloading wholesale electricity price data from [gridstatus.io](https://gridstatus.io) for all major RTOs. The system provides an alternative data source to EIA.
+
+#### Price Data Download System
+- **Main Script**: `download_rto_prices_gridstatus.py` - Python script for downloading day-ahead wholesale electricity prices
+- **Bash Wrapper**: `download_all_rto_prices.sh` - Enhanced wrapper with logging, error handling, and progress tracking
+- **Documentation**: `README_gridstatus_price_download.md` - Comprehensive documentation for the download system
+
+#### Supported RTOs
+The system downloads price data for 7 major RTOs:
+- **CAISO** (California) - NP-15, SP-15, ZP-26 trading hub zones
+- **ERCOT** (Texas) - Hub average pricing
+- **ISONE** (New England) - Internal hub + 8 load zones
+- **MISO** (Midwest) - 8 regional generation hubs
+- **NYISO** (New York) - 11 load zones (A through K)
+- **PJM** (Mid-Atlantic) - 19 utility generation hubs
+- **SPP** (Southwest) - North and South trading hubs
+
+#### Key Features
+- **Representative Locations**: Uses specific hubs/zones that match EIA data structure rather than downloading all locations
+- **RTO Averages**: Calculates weighted averages across multiple locations for each RTO
+- **Timezone Handling**: Proper conversion to each RTO's local timezone
+- **EIA-Compatible Format**: Output CSV files match existing EIA data structure
+- **Comprehensive Logging**: Detailed logs with progress tracking and error handling
+
+#### Output
+- Files saved to `gridstatus_price/` directory
+- Format: `{rto}_price_day_ahead_hr_{year}.csv`
+- Contains hourly day-ahead prices with proper headers and metadata
 
 ### Calculating the impact of climate change
 RTO_climate_change_impact.py creates the /climate_change_results folder and puts csv files into it containing average demand in baseline and current periods, as well as absolute and percent changes.

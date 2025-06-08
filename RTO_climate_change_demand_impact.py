@@ -187,8 +187,8 @@ def main(degree_of_fit, year):
     
     # Define file paths
     # Adjust these paths based on where your files are actually located
-    poly_fits_path = f'polynomial_fits_RTO_{year}_degree{degree_of_fit}.json'
-    temp_dir = 'RTO calc temps/weighted_temps'
+    poly_fits_path = f'polynomial_fits/polynomial_fits_RTO_{year}_degree{degree_of_fit}.json'
+    temp_dir = 'RTO temp calc/weighted_temps'
         
     if not os.path.exists(temp_dir):
         # Try alternative locations
@@ -260,9 +260,8 @@ def main(degree_of_fit, year):
         sys.exit(1)
         
     # Create output directory if it doesn't exist
-    # Use the directory where the polynomial_fits file was found
-    output_dir_parent = os.path.dirname(poly_fits_path)
-    output_dir = os.path.join(output_dir_parent, f"climate_change_results")
+    # Use root-level climate_change_results directory
+    output_dir = "climate_change_results"
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
         print(f"Created output directory: {output_dir}")
@@ -288,6 +287,7 @@ def main(degree_of_fit, year):
     percent_changes_df = ((current_df - baseline_df) / baseline_df * 100).round(1)
     
     # Save results with year and degree in filenames
+    print(os.path.join(output_dir, f'rto_demand_changes_absolute_{year}_degree{degree_of_fit}.csv'))
     results_df.to_csv(os.path.join(output_dir, f'rto_demand_changes_absolute_{year}_degree{degree_of_fit}.csv'))
     percent_changes_df.to_csv(os.path.join(output_dir, f'rto_demand_changes_percent_{year}_degree{degree_of_fit}.csv'))
     baseline_df.to_csv(os.path.join(output_dir, f'rto_demand_baseline_{year}_degree{degree_of_fit}.csv'))
@@ -321,6 +321,8 @@ def main(degree_of_fit, year):
             print(f"- {error}")
 
 if __name__ == "__main__":
-    degree_of_fit = 4 ## which degree of polynomial fit to use
-    year = 2023 ## which year to use for the demand & temp data in the polynomial fit
-    main(degree_of_fit, year) 
+    # Loop over years and polynomial degrees
+    for year in [2023, 2024]:
+        for degree_of_fit in [3, 4]:
+            print(f"\nProcessing year {year} with polynomial degree {degree_of_fit}")
+            main(degree_of_fit, year)

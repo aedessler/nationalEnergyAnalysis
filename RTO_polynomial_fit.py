@@ -298,7 +298,8 @@ def main(max_degree=4):
             errors.append(error_msg)
                 
     # Save results to JSON file
-    output_file = f'polynomial_fits_RTO_{year}_degree{max_degree}.json'
+    os.makedirs('polynomial_fits', exist_ok=True)
+    output_file = f'polynomial_fits/polynomial_fits_RTO_{year}_degree{max_degree}.json'
     with open(output_file, 'w') as f:
         json.dump({
             'fits': results,
@@ -321,16 +322,20 @@ def main(max_degree=4):
             print(f"- {error}")
 
 # Hard-coded mapping between demand and temperature files
-year = 2024 ## which year to use for the demand & temp data
-FILE_MAPPING = {
-    f'caiso_load_act_hr_{year}.csv': 'CALIFORNIA_INDEPENDENT_SYSTEM_OPERATOR_weighted_temp.nc',
-    f'ercot_load_act_hr_{year}.csv': 'ELECTRIC_RELIABILITY_COUNCIL_OF_TEXAS,_INC._weighted_temp.nc',
-    f'isone_load_act_hr_{year}.csv': 'ISO_NEW_ENGLAND_INC._weighted_temp.nc',
-    f'miso_load_act_hr_{year}.csv': 'MIDCONTINENT_INDEPENDENT_TRANSMISSION_SYSTEM_OPERATOR,_INC.._weighted_temp.nc',
-    f'nyiso_load_act_hr_{year}.csv': 'NEW_YORK_INDEPENDENT_SYSTEM_OPERATOR_weighted_temp.nc',
-    f'pjm_load_act_hr_{year}.csv': 'PJM_INTERCONNECTION,_LLC_weighted_temp.nc',
-    f'spp_load_act_hr_{year}.csv': 'SOUTHWEST_POWER_POOL_weighted_temp.nc'
-}
+# Loop over years and polynomial degrees
+for year in [2023, 2024]:
+    for max_degree in [3, 4]:
+        FILE_MAPPING = {
+            f'caiso_load_act_hr_{year}.csv': 'CALIFORNIA_INDEPENDENT_SYSTEM_OPERATOR_weighted_temp.nc',
+            f'ercot_load_act_hr_{year}.csv': 'ELECTRIC_RELIABILITY_COUNCIL_OF_TEXAS,_INC._weighted_temp.nc',
+            f'isone_load_act_hr_{year}.csv': 'ISO_NEW_ENGLAND_INC._weighted_temp.nc',
+            f'miso_load_act_hr_{year}.csv': 'MIDCONTINENT_INDEPENDENT_TRANSMISSION_SYSTEM_OPERATOR,_INC.._weighted_temp.nc',
+            f'nyiso_load_act_hr_{year}.csv': 'NEW_YORK_INDEPENDENT_SYSTEM_OPERATOR_weighted_temp.nc',
+            f'pjm_load_act_hr_{year}.csv': 'PJM_INTERCONNECTION,_LLC_weighted_temp.nc',
+            f'spp_load_act_hr_{year}.csv': 'SOUTHWEST_POWER_POOL_weighted_temp.nc'
+        }
 
-# Run the main function with the specified degree
-main(max_degree=3) 
+        # Run the main function with the current year and degree
+        print(f"\nProcessing year {year} with polynomial degree {max_degree}")
+        main(max_degree=max_degree)
+        
