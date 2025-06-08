@@ -1,0 +1,193 @@
+{
+  "fits": [
+    {
+      "rto": "CAISO",
+      "fit_details": {
+        "max_degree": 3
+      },
+      "coefficients": {
+        "constant": 43.559609154786884,
+        "temperature": -3.6449348931578376,
+        "temperature^2": 0.16660793780831262,
+        "temperature^3": -0.0015020983074066397,
+        "weekday_effect": 2.171337372814954
+      },
+      "fit_statistics": {
+        "rmse_GW": 1.349474199669183,
+        "r2": 0.8891238144302094,
+        "n_days": 345
+      },
+      "data_range": {
+        "start_date": "2024-01-01",
+        "end_date": "2024-12-31",
+        "min_temp_C": 7.299517783910504,
+        "max_temp_C": 26.01857685991927,
+        "avg_demand_GW": 25.742507593896025,
+        "max_demand_GW": 37.52816666666667
+      }
+    },
+    {
+      "rto": "ERCOT",
+      "fit_details": {
+        "max_degree": 3
+      },
+      "coefficients": {
+        "constant": 63.97422299179115,
+        "temperature": -2.1116154538639345,
+        "temperature^2": 0.031022127782510043,
+        "temperature^3": 0.00130975082695117,
+        "weekday_effect": 1.5280911950945144
+      },
+      "fit_statistics": {
+        "rmse_GW": 1.9342955644960935,
+        "r2": 0.9425795373409999,
+        "n_days": 345
+      },
+      "data_range": {
+        "start_date": "2024-01-01",
+        "end_date": "2024-12-31",
+        "min_temp_C": -4.223203674533434,
+        "max_temp_C": 31.928753615063364,
+        "avg_demand_GW": 53.374996495177484,
+        "max_demand_GW": 72.48621625
+      }
+    },
+    {
+      "rto": "ISONE",
+      "fit_details": {
+        "max_degree": 3
+      },
+      "coefficients": {
+        "constant": 13.282336394590338,
+        "temperature": -0.3128405801327935,
+        "temperature^2": -0.004831408368001507,
+        "temperature^3": 0.0009150952147247821,
+        "weekday_effect": 0.8705698887523783
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.5748072062500266,
+        "r2": 0.9152613365262071,
+        "n_days": 352
+      },
+      "data_range": {
+        "start_date": "2024-01-01",
+        "end_date": "2024-12-31",
+        "min_temp_C": -10.245735545759102,
+        "max_temp_C": 26.671535289591265,
+        "avg_demand_GW": 13.030111225565918,
+        "max_demand_GW": 20.451238333333333
+      }
+    },
+    {
+      "rto": "MISO",
+      "fit_details": {
+        "max_degree": 3
+      },
+      "coefficients": {
+        "constant": 76.01381021703483,
+        "temperature": -1.5587718118843052,
+        "temperature^2": 0.0029617453121292495,
+        "temperature^3": 0.0028771705743576414,
+        "weekday_effect": 5.3105077064059145
+      },
+      "fit_statistics": {
+        "rmse_GW": 2.1677964355176984,
+        "r2": 0.9355311618371333,
+        "n_days": 342
+      },
+      "data_range": {
+        "start_date": "2024-01-01",
+        "end_date": "2024-12-30",
+        "min_temp_C": -13.153365520401033,
+        "max_temp_C": 26.947768010088396,
+        "avg_demand_GW": 75.38162239766082,
+        "max_demand_GW": 99.13704708333334
+      }
+    },
+    {
+      "rto": "NYISO",
+      "fit_details": {
+        "max_degree": 3
+      },
+      "coefficients": {
+        "constant": 17.486142144940793,
+        "temperature": -0.3522665134731174,
+        "temperature^2": -0.007515152296186105,
+        "temperature^3": 0.0010504238505472422,
+        "weekday_effect": 1.1015717424956533
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.6760100367924367,
+        "r2": 0.9267889193341247,
+        "n_days": 346
+      },
+      "data_range": {
+        "start_date": "2024-01-01",
+        "end_date": "2024-12-31",
+        "min_temp_C": -8.723776833471057,
+        "max_temp_C": 28.2681374412615,
+        "avg_demand_GW": 17.175765648396478,
+        "max_demand_GW": 24.861564583333333
+      }
+    },
+    {
+      "rto": "PJM",
+      "fit_details": {
+        "max_degree": 3
+      },
+      "coefficients": {
+        "constant": 95.18191899202542,
+        "temperature": -2.3670508571527114,
+        "temperature^2": 0.0010337886128534892,
+        "temperature^3": 0.004213522028319227,
+        "weekday_effect": 6.484708547607601
+      },
+      "fit_statistics": {
+        "rmse_GW": 2.815818771984154,
+        "r2": 0.9478662757169658,
+        "n_days": 347
+      },
+      "data_range": {
+        "start_date": "2024-01-01",
+        "end_date": "2024-12-31",
+        "min_temp_C": -9.15921492495033,
+        "max_temp_C": 28.179250771399328,
+        "avg_demand_GW": 91.02792369657625,
+        "max_demand_GW": 125.00789891666666
+      }
+    },
+    {
+      "rto": "SPP",
+      "fit_details": {
+        "max_degree": 3
+      },
+      "coefficients": {
+        "constant": 33.222183064458335,
+        "temperature": -0.7021728585463187,
+        "temperature^2": 0.006870985579738509,
+        "temperature^3": 0.0009792341411573452,
+        "weekday_effect": 1.6305872048122352
+      },
+      "fit_statistics": {
+        "rmse_GW": 1.0328159466945692,
+        "r2": 0.9467447294629289,
+        "n_days": 343
+      },
+      "data_range": {
+        "start_date": "2024-01-02",
+        "end_date": "2024-12-31",
+        "min_temp_C": -16.47332703848675,
+        "max_temp_C": 30.047330354534566,
+        "avg_demand_GW": 33.147906533163265,
+        "max_demand_GW": 45.17002854166666
+      }
+    }
+  ],
+  "errors": [],
+  "metadata": {
+    "max_degree": 3,
+    "n_zones_total": 7,
+    "n_zones_successful": 7,
+    "n_zones_failed": 0
+  }
+}

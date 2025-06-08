@@ -1,0 +1,1848 @@
+{
+  "fits": [
+    {
+      "zone_name": "Southern",
+      "rto": "ERCOT",
+      "latitude": 27.78798033871677,
+      "longitude": -98.58353734668158,
+      "coefficients": {
+        "constant": 5.508247918136599,
+        "temperature": -0.2495321355301022,
+        "temperature^2": 0.0015735987031684554,
+        "temperature^3": 0.00040464871511865886,
+        "temperature^4": -7.0471958211145934e-06,
+        "weekday_effect": 0.0748205906240813
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.22861887246583035,
+        "r2": 0.8939344191797115,
+        "n_days": 318
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-31",
+        "min_temp_C": 1.221190094947815,
+        "max_temp_C": 33.911582946777344,
+        "avg_demand_GW": 3.9034797237948746,
+        "max_demand_GW": 6.60102875
+      }
+    },
+    {
+      "zone_name": "Far West",
+      "rto": "ERCOT",
+      "latitude": 31.05549196018928,
+      "longitude": -102.81322593757432,
+      "coefficients": {
+        "constant": 5.4717599978141465,
+        "temperature": 0.16059325442198144,
+        "temperature^2": -0.019266049690461307,
+        "temperature^3": 0.000805745856265235,
+        "temperature^4": -1.0618391856201847e-05,
+        "weekday_effect": -0.07605779798958485
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.49615348349628624,
+        "r2": 0.08394081622470695,
+        "n_days": 318
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-31",
+        "min_temp_C": -1.0172895193099976,
+        "max_temp_C": 37.252357482910156,
+        "avg_demand_GW": 5.811396856547782,
+        "max_demand_GW": 12.520325416666667
+      }
+    },
+    {
+      "zone_name": "West LR",
+      "rto": "ERCOT",
+      "latitude": 30.87794111446027,
+      "longitude": -99.98992199613689,
+      "coefficients": {
+        "constant": 1.7374139320346913,
+        "temperature": -0.05296598357013062,
+        "temperature^2": 0.0006503111834841709,
+        "temperature^3": 5.438287159746233e-05,
+        "temperature^4": -6.491456930365933e-07,
+        "weekday_effect": 0.005923637609250201
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.11512253911009186,
+        "r2": 0.7032723334002895,
+        "n_days": 318
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-31",
+        "min_temp_C": -4.756256103515625,
+        "max_temp_C": 33.00973892211914,
+        "avg_demand_GW": 1.398993251571676,
+        "max_demand_GW": 2.17955875
+      }
+    },
+    {
+      "zone_name": "North Central",
+      "rto": "ERCOT",
+      "latitude": 32.18639338002525,
+      "longitude": -97.9461571567658,
+      "coefficients": {
+        "constant": 17.321948370317532,
+        "temperature": -0.5949796720263679,
+        "temperature^2": -0.00979454238078831,
+        "temperature^3": 0.0017837141882313208,
+        "temperature^4": -2.6812381234875445e-05,
+        "weekday_effect": 0.6003699528375603
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.8783186578677965,
+        "r2": 0.9023867508174189,
+        "n_days": 318
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-31",
+        "min_temp_C": -3.964280366897583,
+        "max_temp_C": 35.437679290771484,
+        "avg_demand_GW": 13.737569209181673,
+        "max_demand_GW": 21.415392916666665
+      }
+    },
+    {
+      "zone_name": "North LR",
+      "rto": "ERCOT",
+      "latitude": 33.83343807200349,
+      "longitude": -99.09998136060776,
+      "coefficients": {
+        "constant": 1.5499003755609135,
+        "temperature": -0.03991950549798697,
+        "temperature^2": -0.0013987447450219145,
+        "temperature^3": 0.000176237981193886,
+        "temperature^4": -2.7717094794348462e-06,
+        "weekday_effect": 0.027251994675433353
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.15674793653426652,
+        "r2": 0.6274865747371647,
+        "n_days": 318
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-31",
+        "min_temp_C": -5.240304470062256,
+        "max_temp_C": 35.88021469116211,
+        "avg_demand_GW": 1.3122761048735627,
+        "max_demand_GW": 2.3049495833333333
+      }
+    },
+    {
+      "zone_name": "East LR",
+      "rto": "ERCOT",
+      "latitude": 31.99707907690965,
+      "longitude": -95.56894863910122,
+      "coefficients": {
+        "constant": 2.4031738251778836,
+        "temperature": -0.0739632113279376,
+        "temperature^2": -0.003924555702566368,
+        "temperature^3": 0.0003772150412349193,
+        "temperature^4": -5.6982517345529615e-06,
+        "weekday_effect": 0.06201089238707553
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.119738383345065,
+        "r2": 0.8638004736983544,
+        "n_days": 318
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-31",
+        "min_temp_C": -0.2513923645019531,
+        "max_temp_C": 32.92194747924805,
+        "avg_demand_GW": 1.7397605717270859,
+        "max_demand_GW": 2.8441575
+      }
+    },
+    {
+      "zone_name": "South Central",
+      "rto": "ERCOT",
+      "latitude": 29.803366382969944,
+      "longitude": -97.37435963940584,
+      "coefficients": {
+        "constant": 10.633936326021825,
+        "temperature": -0.3910624674906275,
+        "temperature^2": -0.0029105508591940744,
+        "temperature^3": 0.0008509702354994079,
+        "temperature^4": -1.1604758581591637e-05,
+        "weekday_effect": 0.29762584162818245
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.4808494379374594,
+        "r2": 0.9100426427672929,
+        "n_days": 318
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-31",
+        "min_temp_C": -0.3740285336971283,
+        "max_temp_C": 33.527164459228516,
+        "avg_demand_GW": 8.032965643528392,
+        "max_demand_GW": 13.075316666666666
+      }
+    },
+    {
+      "zone_name": "Coast",
+      "rto": "ERCOT",
+      "latitude": 29.460775225959548,
+      "longitude": -95.596109535612,
+      "coefficients": {
+        "constant": 11.593264279589985,
+        "temperature": 0.33505845703390397,
+        "temperature^2": -0.06936303355668635,
+        "temperature^3": 0.003392815837285154,
+        "temperature^4": -4.234193258153945e-05,
+        "weekday_effect": 0.45365852194443
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.8404980456490284,
+        "r2": 0.8856643776596758,
+        "n_days": 318
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-31",
+        "min_temp_C": 3.6633427143096924,
+        "max_temp_C": 31.993370056152344,
+        "avg_demand_GW": 12.9679159691111,
+        "max_demand_GW": 22.393304166666667
+      }
+    },
+    {
+      "zone_name": "Genessee",
+      "rto": "NYISO",
+      "latitude": 43.1148716023588,
+      "longitude": -77.22972833830626,
+      "coefficients": {
+        "constant": 1.0431138561803985,
+        "temperature": -0.015096661989589637,
+        "temperature^2": -0.0003837281633740664,
+        "temperature^3": 6.155983582610703e-06,
+        "temperature^4": 1.9595854936851743e-06,
+        "weekday_effect": 0.0874932063840625
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.060799569122926674,
+        "r2": 0.7571061452577488,
+        "n_days": 319
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-31",
+        "min_temp_C": -16.208023071289062,
+        "max_temp_C": 26.681859970092773,
+        "avg_demand_GW": 1.0366463235807122,
+        "max_demand_GW": 1.65216261
+      }
+    },
+    {
+      "zone_name": "Long Island",
+      "rto": "NYISO",
+      "latitude": 40.844875428087555,
+      "longitude": -73.02224222195842,
+      "coefficients": {
+        "constant": 2.213016761054501,
+        "temperature": -0.04822915162075293,
+        "temperature^2": -0.0010372135114460805,
+        "temperature^3": 0.0001282524218451223,
+        "temperature^4": 2.3592898101737283e-06,
+        "weekday_effect": 0.10869061219015078
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.1335849906678773,
+        "r2": 0.9103192552523348,
+        "n_days": 319
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-31",
+        "min_temp_C": -10.456917762756348,
+        "max_temp_C": 26.199987411499023,
+        "avg_demand_GW": 2.126529703226237,
+        "max_demand_GW": 4.35800597
+      }
+    },
+    {
+      "zone_name": "New York City",
+      "rto": "NYISO",
+      "latitude": 40.717648893386645,
+      "longitude": -73.87804711339888,
+      "coefficients": {
+        "constant": 5.281672979045365,
+        "temperature": -0.08516601301688106,
+        "temperature^2": -0.0005725835651294109,
+        "temperature^3": 0.00010969731371470594,
+        "temperature^4": 5.3361463553228036e-06,
+        "weekday_effect": 0.46939040410791955
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.21417490794778307,
+        "r2": 0.930327311256657,
+        "n_days": 319
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-31",
+        "min_temp_C": -10.101513862609863,
+        "max_temp_C": 28.13623046875,
+        "avg_demand_GW": 5.372900193748987,
+        "max_demand_GW": 9.290568910000001
+      }
+    },
+    {
+      "zone_name": "Millwood",
+      "rto": "NYISO",
+      "latitude": 41.2394962514144,
+      "longitude": -73.81419973483771,
+      "coefficients": {
+        "constant": 0.3305832461544033,
+        "temperature": -0.006591016603106859,
+        "temperature^2": -0.0001129312078214774,
+        "temperature^3": 1.1757063642466331e-07,
+        "temperature^4": 7.967707008067447e-07,
+        "weekday_effect": 0.009465403872594235
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.018197232485832947,
+        "r2": 0.8682293759714692,
+        "n_days": 319
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-31",
+        "min_temp_C": -14.067530632019043,
+        "max_temp_C": 27.24786949157715,
+        "avg_demand_GW": 0.3012276636168011,
+        "max_demand_GW": 0.5551605399999999
+      }
+    },
+    {
+      "zone_name": "Dunwoodie",
+      "rto": "NYISO",
+      "latitude": 41.035039748718376,
+      "longitude": -73.78461489898947,
+      "coefficients": {
+        "constant": 0.6230043700755094,
+        "temperature": -0.011638669875061668,
+        "temperature^2": -0.00015934082244671406,
+        "temperature^3": 1.822612860661227e-05,
+        "temperature^4": 6.563302347960844e-07,
+        "weekday_effect": 0.04055164301442736
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.030627704076448072,
+        "r2": 0.8926728395172333,
+        "n_days": 319
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-31",
+        "min_temp_C": -11.885436058044434,
+        "max_temp_C": 27.534194946289062,
+        "avg_demand_GW": 0.6055185782594125,
+        "max_demand_GW": 1.0999175600000002
+      }
+    },
+    {
+      "zone_name": "North",
+      "rto": "NYISO",
+      "latitude": 32.32652159864095,
+      "longitude": -96.67649320152836,
+      "coefficients": {
+        "constant": 0.7366114091725023,
+        "temperature": -0.013420727028176998,
+        "temperature^2": 0.001721312153161073,
+        "temperature^3": -9.689634136754895e-05,
+        "temperature^4": 1.630532784746467e-06,
+        "weekday_effect": 0.0149792167619884
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.044971470911505586,
+        "r2": 0.4741181266316338,
+        "n_days": 319
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-31",
+        "min_temp_C": -2.4216678142547607,
+        "max_temp_C": 35.04466247558594,
+        "avg_demand_GW": 0.65640757100842,
+        "max_demand_GW": 0.8086004458333332
+      }
+    },
+    {
+      "zone_name": "North",
+      "rto": "NYISO",
+      "latitude": 44.53939037801901,
+      "longitude": -74.01692235153843,
+      "coefficients": {
+        "constant": 0.6772689207946967,
+        "temperature": -0.009710641543657158,
+        "temperature^2": -1.3876078659573437e-05,
+        "temperature^3": 1.4325217835033848e-05,
+        "temperature^4": 7.33809377495128e-08,
+        "weekday_effect": 0.009932370831824003
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.02481200318493885,
+        "r2": 0.8399197799071713,
+        "n_days": 319
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-31",
+        "min_temp_C": -27.11141014099121,
+        "max_temp_C": 24.324050903320312,
+        "avg_demand_GW": 0.65640757100842,
+        "max_demand_GW": 0.8086004458333332
+      }
+    },
+    {
+      "zone_name": "Central",
+      "rto": "NYISO",
+      "latitude": 42.60940993281414,
+      "longitude": -76.73006750772652,
+      "coefficients": {
+        "constant": 1.7448844110134463,
+        "temperature": -0.033391035221353726,
+        "temperature^2": -0.00013113288570427032,
+        "temperature^3": 1.084571838841234e-05,
+        "temperature^4": 2.742327359828483e-06,
+        "weekday_effect": 0.10508227188243029
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.08867957056874758,
+        "r2": 0.7866863944109593,
+        "n_days": 319
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-31",
+        "min_temp_C": -15.568636894226074,
+        "max_temp_C": 25.57990837097168,
+        "avg_demand_GW": 1.6746073045163852,
+        "max_demand_GW": 2.42264084
+      }
+    },
+    {
+      "zone_name": "West",
+      "rto": "NYISO",
+      "latitude": 32.38791055545587,
+      "longitude": -101.55339144333702,
+      "coefficients": {
+        "constant": 1.670069067904067,
+        "temperature": -0.001561672712511748,
+        "temperature^2": -0.0008983966026917098,
+        "temperature^3": 1.4935701413692563e-05,
+        "temperature^4": 4.664871000110388e-07,
+        "weekday_effect": 0.13903209542824596
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.11134158880817899,
+        "r2": 0.4590117704352398,
+        "n_days": 319
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-31",
+        "min_temp_C": -6.0059638023376465,
+        "max_temp_C": 34.87369918823242,
+        "avg_demand_GW": 1.65643101383475,
+        "max_demand_GW": 2.33575513
+      }
+    },
+    {
+      "zone_name": "West",
+      "rto": "NYISO",
+      "latitude": 42.66131389686562,
+      "longitude": -78.60031607781261,
+      "coefficients": {
+        "constant": 1.6195086980351245,
+        "temperature": -0.017785696703157713,
+        "temperature^2": -0.0004957455197113363,
+        "temperature^3": 2.744402393302067e-05,
+        "temperature^4": 2.0395389290768634e-06,
+        "weekday_effect": 0.13129683209412676
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.08285857382946174,
+        "r2": 0.7003958012336897,
+        "n_days": 319
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-31",
+        "min_temp_C": -15.491652488708496,
+        "max_temp_C": 24.658151626586914,
+        "avg_demand_GW": 1.65643101383475,
+        "max_demand_GW": 2.33575513
+      }
+    },
+    {
+      "zone_name": "Capital",
+      "rto": "NYISO",
+      "latitude": 43.18235551980584,
+      "longitude": -73.98204057041356,
+      "coefficients": {
+        "constant": 1.2391272174421744,
+        "temperature": -0.02241108732978931,
+        "temperature^2": -9.222538816945558e-05,
+        "temperature^3": 3.7229433242198815e-05,
+        "temperature^4": 1.352512570337896e-06,
+        "weekday_effect": 0.06814183171884566
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.07591372803260353,
+        "r2": 0.7704559873044081,
+        "n_days": 319
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-31",
+        "min_temp_C": -24.3985652923584,
+        "max_temp_C": 25.200971603393555,
+        "avg_demand_GW": 1.2587224401031167,
+        "max_demand_GW": 2.0075361000000003
+      }
+    },
+    {
+      "zone_name": "Hudson Valley",
+      "rto": "NYISO",
+      "latitude": 41.71127362308865,
+      "longitude": -74.07530859390462,
+      "coefficients": {
+        "constant": 1.0776523784097825,
+        "temperature": -0.018715347917060175,
+        "temperature^2": -0.0004225127968223031,
+        "temperature^3": 8.454038287001862e-06,
+        "temperature^4": 2.3071237866685123e-06,
+        "weekday_effect": 0.03418623476733863
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.059546184873351116,
+        "r2": 0.8358349901334912,
+        "n_days": 319
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-31",
+        "min_temp_C": -15.145840644836426,
+        "max_temp_C": 26.511627197265625,
+        "avg_demand_GW": 1.0137049917535828,
+        "max_demand_GW": 1.7691403600000002
+      }
+    },
+    {
+      "zone_name": "Mohawk Valley",
+      "rto": "NYISO",
+      "latitude": 43.41582232715486,
+      "longitude": -75.14359972139016,
+      "coefficients": {
+        "constant": 0.8281915734532495,
+        "temperature": -0.018600245112863005,
+        "temperature^2": -0.00013174085240959742,
+        "temperature^3": 2.474071581387587e-05,
+        "temperature^4": 8.963928976437521e-07,
+        "weekday_effect": 0.04773589022432804
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.06428319066728083,
+        "r2": 0.7028705661988088,
+        "n_days": 319
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-31",
+        "min_temp_C": -25.268043518066406,
+        "max_temp_C": 24.53563690185547,
+        "avg_demand_GW": 0.8059476991408208,
+        "max_demand_GW": 1.1792373583333333
+      }
+    },
+    {
+      "zone_name": "PACIFIC GAS & ELECTRIC CO.",
+      "rto": "CAISO",
+      "latitude": 38.13590596805804,
+      "longitude": -121.27680685709429,
+      "coefficients": {
+        "constant": 11.76167738524046,
+        "temperature": -0.10547337532926261,
+        "temperature^2": -0.01910683454049959,
+        "temperature^3": 0.0013720807153341985,
+        "temperature^4": -1.624038496798021e-05,
+        "weekday_effect": 0.9232844966926944
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.5172992933020417,
+        "r2": 0.735957449777082,
+        "n_days": 324
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-31",
+        "min_temp_C": 0.0,
+        "max_temp_C": 29.43340492248535,
+        "avg_demand_GW": 10.980921094791233,
+        "max_demand_GW": 15.380791666666667
+      }
+    },
+    {
+      "zone_name": "SOUTHERN CALIFORNIA EDISON CO",
+      "rto": "CAISO",
+      "latitude": 35.47980955521582,
+      "longitude": -116.95463729722184,
+      "coefficients": {
+        "constant": 10.318512739790522,
+        "temperature": -0.05553901643599263,
+        "temperature^2": -0.005912346528184592,
+        "temperature^3": 0.0004980471174829316,
+        "temperature^4": -5.7113922903277686e-06,
+        "weekday_effect": 1.1550497498154004
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.7555766764474267,
+        "r2": 0.6726818572361787,
+        "n_days": 324
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-31",
+        "min_temp_C": 0.0,
+        "max_temp_C": 37.130001068115234,
+        "avg_demand_GW": 11.055181644681635,
+        "max_demand_GW": 16.091041666666666
+      }
+    },
+    {
+      "zone_name": "SAN DIEGO GAS & ELECTRIC CO",
+      "rto": "CAISO",
+      "latitude": 33.04369849411722,
+      "longitude": -116.80254361475028,
+      "coefficients": {
+        "constant": 2.193015969193229,
+        "temperature": -0.02444988317376161,
+        "temperature^2": -0.000748560938021407,
+        "temperature^3": 4.992509159243193e-05,
+        "temperature^4": 9.208385131498345e-07,
+        "weekday_effect": 0.1910023991700628
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.15498909790434687,
+        "r2": 0.49946990357223775,
+        "n_days": 324
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-31",
+        "min_temp_C": 0.0,
+        "max_temp_C": 27.75742530822754,
+        "avg_demand_GW": 2.1018067165673906,
+        "max_demand_GW": 3.000916666666667
+      }
+    },
+    {
+      "zone_name": "VALLEY ELECTRIC ASSN, INC",
+      "rto": "CAISO",
+      "latitude": 37.01172473754738,
+      "longitude": -116.70594993264903,
+      "coefficients": {
+        "constant": 0.08618933055243547,
+        "temperature": -0.0023561849478889677,
+        "temperature^2": -0.0002356780878175779,
+        "temperature^3": 1.99295083635455e-05,
+        "temperature^4": -3.15078233984253e-07,
+        "weekday_effect": 0.002433959719771521
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.006206192309508746,
+        "r2": 0.8018258718649397,
+        "n_days": 324
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-31",
+        "min_temp_C": -2.8340518474578857,
+        "max_temp_C": 35.53873062133789,
+        "avg_demand_GW": 0.06694759887505483,
+        "max_demand_GW": 0.10658333333333332
+      }
+    },
+    {
+      "zone_name": "LRZ3",
+      "rto": "MISO",
+      "latitude": 42.25307280104187,
+      "longitude": -93.60150423879382,
+      "coefficients": {
+        "constant": 9.4568493790692,
+        "temperature": -0.14239646234166364,
+        "temperature^2": 0.0024391960155774914,
+        "temperature^3": 0.00021825744784799038,
+        "temperature^4": -3.3510227683668234e-08,
+        "weekday_effect": 0.788811620944909
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.4673664624686236,
+        "r2": 0.77732310829036,
+        "n_days": 315
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-30",
+        "min_temp_C": -20.09720802307129,
+        "max_temp_C": 27.41376495361328,
+        "avg_demand_GW": 10.013794768518519,
+        "max_demand_GW": 12.799208333333333
+      }
+    },
+    {
+      "zone_name": "LRZ7",
+      "rto": "MISO",
+      "latitude": 43.61079787661043,
+      "longitude": -84.53225986789896,
+      "coefficients": {
+        "constant": 16.24301398884434,
+        "temperature": -0.19475728646167223,
+        "temperature^2": 0.000564180067332463,
+        "temperature^3": 0.0005170298814025719,
+        "temperature^4": 5.685037836638359e-07,
+        "weekday_effect": 1.9795006455375344
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.7517331376728887,
+        "r2": 0.8188647587467877,
+        "n_days": 315
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-30",
+        "min_temp_C": -14.86164379119873,
+        "max_temp_C": 27.086517333984375,
+        "avg_demand_GW": 17.61809758068783,
+        "max_demand_GW": 25.090260416666666
+      }
+    },
+    {
+      "zone_name": "LRZ6",
+      "rto": "MISO",
+      "latitude": 39.781693346591105,
+      "longitude": -86.41969562469399,
+      "coefficients": {
+        "constant": 10.036635798779416,
+        "temperature": -0.19636563232724982,
+        "temperature^2": -0.0018399185347785108,
+        "temperature^3": 0.000488713639307419,
+        "temperature^4": -2.556610220868938e-06,
+        "weekday_effect": 0.888998124217808
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.3756309560461407,
+        "r2": 0.8440625517706957,
+        "n_days": 315
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-30",
+        "min_temp_C": -7.304437160491943,
+        "max_temp_C": 26.586816787719727,
+        "avg_demand_GW": 9.767191205026457,
+        "max_demand_GW": 12.511095
+      }
+    },
+    {
+      "zone_name": "LRZ4",
+      "rto": "MISO",
+      "latitude": 39.476902567761165,
+      "longitude": -89.27532992269981,
+      "coefficients": {
+        "constant": 5.162746101496099,
+        "temperature": -0.09599624172765575,
+        "temperature^2": -0.0011589749327889339,
+        "temperature^3": 0.0002216573197719178,
+        "temperature^4": -1.112573572397946e-07,
+        "weekday_effect": 0.4329359983161632
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.23478762954047339,
+        "r2": 0.8061553862957717,
+        "n_days": 315
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-30",
+        "min_temp_C": -9.649285316467285,
+        "max_temp_C": 28.77410316467285,
+        "avg_demand_GW": 5.044957257936509,
+        "max_demand_GW": 6.641519583333333
+      }
+    },
+    {
+      "zone_name": "LRZ5",
+      "rto": "MISO",
+      "latitude": 39.052227173510225,
+      "longitude": -91.80456882609867,
+      "coefficients": {
+        "constant": 10.424428641312394,
+        "temperature": -0.2047866814347731,
+        "temperature^2": -0.0030512744327472097,
+        "temperature^3": 0.0006257276929881353,
+        "temperature^4": -7.10877350331762e-06,
+        "weekday_effect": 0.8233494030971357
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.3949916921401271,
+        "r2": 0.840949154102526,
+        "n_days": 315
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-30",
+        "min_temp_C": -8.723212242126465,
+        "max_temp_C": 29.916330337524414,
+        "avg_demand_GW": 10.013794768518519,
+        "max_demand_GW": 12.799208333333333
+      }
+    },
+    {
+      "zone_name": "LRZ8",
+      "rto": "MISO",
+      "latitude": 34.868768942528334,
+      "longitude": -91.96989161933251,
+      "coefficients": {
+        "constant": 21.475735110003757,
+        "temperature": -0.14692764300882527,
+        "temperature^2": -0.06056623494359407,
+        "temperature^3": 0.004173415768148555,
+        "temperature^4": -6.120353096867573e-05,
+        "weekday_effect": 0.49699771033726053
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.9940957425994726,
+        "r2": 0.8653889372285353,
+        "n_days": 315
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-30",
+        "min_temp_C": -1.9466705322265625,
+        "max_temp_C": 32.12649154663086,
+        "avg_demand_GW": 19.649553189153437,
+        "max_demand_GW": 27.496120416666667
+      }
+    },
+    {
+      "zone_name": "LRZ10",
+      "rto": "MISO",
+      "latitude": 32.26491235089496,
+      "longitude": -90.0294635092942,
+      "coefficients": {
+        "constant": 20.81060870036003,
+        "temperature": 0.48916668404682256,
+        "temperature^2": -0.13481952538897685,
+        "temperature^3": 0.0069411430278532105,
+        "temperature^4": -9.371854490078962e-05,
+        "weekday_effect": 0.5836193003147542
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.790686904869866,
+        "r2": 0.9148404382570596,
+        "n_days": 315
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-30",
+        "min_temp_C": 3.6693267822265625,
+        "max_temp_C": 31.5113525390625,
+        "avg_demand_GW": 19.649553189153437,
+        "max_demand_GW": 27.496120416666667
+      }
+    },
+    {
+      "zone_name": "LRZ9",
+      "rto": "MISO",
+      "latitude": 31.003458280264837,
+      "longitude": -92.6971553797902,
+      "coefficients": {
+        "constant": 20.80002681106233,
+        "temperature": 0.6399698084951667,
+        "temperature^2": -0.1424202618751593,
+        "temperature^3": 0.006735044351357825,
+        "temperature^4": -8.61135912602737e-05,
+        "weekday_effect": 0.6725069317553353
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.7137315010936429,
+        "r2": 0.9306104524715885,
+        "n_days": 315
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-30",
+        "min_temp_C": 3.087200164794922,
+        "max_temp_C": 32.489990234375,
+        "avg_demand_GW": 19.649553189153437,
+        "max_demand_GW": 27.496120416666667
+      }
+    },
+    {
+      "zone_name": "LRZ2",
+      "rto": "MISO",
+      "latitude": 45.048410183287785,
+      "longitude": -88.28551335261251,
+      "coefficients": {
+        "constant": 15.756978601399794,
+        "temperature": -0.16648996982896086,
+        "temperature^2": 0.003213679735561457,
+        "temperature^3": 0.0004050895023187104,
+        "temperature^4": 4.3300803842922877e-07,
+        "weekday_effect": 2.0602566396686632
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.817339674661113,
+        "r2": 0.785868418342029,
+        "n_days": 315
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-30",
+        "min_temp_C": -18.982213973999023,
+        "max_temp_C": 28.649965286254883,
+        "avg_demand_GW": 17.61809758068783,
+        "max_demand_GW": 25.090260416666666
+      }
+    },
+    {
+      "zone_name": "LRZ1",
+      "rto": "MISO",
+      "latitude": 46.740106939978894,
+      "longitude": -97.2995447822004,
+      "coefficients": {
+        "constant": 10.32604846046795,
+        "temperature": -0.07600832397898176,
+        "temperature^2": 0.0003500583931629284,
+        "temperature^3": 9.104847118746974e-05,
+        "temperature^4": 3.511483959933762e-06,
+        "weekday_effect": 0.7790239309908057
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.5739927275139767,
+        "r2": 0.6277795927896255,
+        "n_days": 315
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-30",
+        "min_temp_C": -23.985807418823242,
+        "max_temp_C": 30.3834171295166,
+        "avg_demand_GW": 11.10545853042328,
+        "max_demand_GW": 14.048435
+      }
+    },
+    {
+      "zone_name": "Sunflower Electric Power Corporation",
+      "rto": "SPP",
+      "latitude": 38.58480949288028,
+      "longitude": -99.82099383564082,
+      "coefficients": {
+        "constant": 0.6141556995889219,
+        "temperature": -0.00213558281600932,
+        "temperature^2": -1.453550586464862e-05,
+        "temperature^3": -2.5495027367461827e-06,
+        "temperature^4": 5.379746234422624e-07,
+        "weekday_effect": 0.04405554648056144
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.027079986928083243,
+        "r2": 0.7682884750197858,
+        "n_days": 306
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-31",
+        "min_temp_C": -13.665191650390625,
+        "max_temp_C": 28.068092346191406,
+        "avg_demand_GW": 0.6583293905194099,
+        "max_demand_GW": 0.871017375
+      }
+    },
+    {
+      "zone_name": "Grand River Dam Authority",
+      "rto": "SPP",
+      "latitude": 36.635897464930146,
+      "longitude": -95.43265441188414,
+      "coefficients": {
+        "constant": 0.82345146503855,
+        "temperature": -0.007287716049859965,
+        "temperature^2": -2.4026887932443955e-05,
+        "temperature^3": 1.718404908775017e-05,
+        "temperature^4": -9.275326438565057e-08,
+        "weekday_effect": 0.026058831382952483
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.021673377955703985,
+        "r2": 0.8558305825316735,
+        "n_days": 306
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-31",
+        "min_temp_C": -6.435563564300537,
+        "max_temp_C": 31.74053382873535,
+        "avg_demand_GW": 0.8242307303124381,
+        "max_demand_GW": 1.0341048333333334
+      }
+    },
+    {
+      "zone_name": "Lincoln Electric System",
+      "rto": "SPP",
+      "latitude": 40.82243326103038,
+      "longitude": -96.66865327004456,
+      "coefficients": {
+        "constant": 0.37709983742140024,
+        "temperature": -0.00898559789138932,
+        "temperature^2": 7.80190875093854e-05,
+        "temperature^3": 1.6193678894098425e-05,
+        "temperature^4": -8.997037441443405e-08,
+        "weekday_effect": 0.03428921940759503
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.016480697590681586,
+        "r2": 0.8972956440125285,
+        "n_days": 306
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-31",
+        "min_temp_C": -13.395779609680176,
+        "max_temp_C": 28.6624698638916,
+        "avg_demand_GW": 0.3882644185903149,
+        "max_demand_GW": 0.5367109583333333
+      }
+    },
+    {
+      "zone_name": "Omaha Public Power District",
+      "rto": "SPP",
+      "latitude": 40.99286478148669,
+      "longitude": -96.29241244084486,
+      "coefficients": {
+        "constant": 1.4277298074216143,
+        "temperature": -0.021619146777455415,
+        "temperature^2": 0.00013456901029558954,
+        "temperature^3": 4.32741409291044e-05,
+        "temperature^4": 1.0737699325111585e-08,
+        "weekday_effect": 0.09573447073723587
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.05241163736305295,
+        "r2": 0.8954290500760009,
+        "n_days": 306
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-31",
+        "min_temp_C": -13.5217924118042,
+        "max_temp_C": 28.26324462890625,
+        "avg_demand_GW": 1.4977174543340266,
+        "max_demand_GW": 1.9905117499999998
+      }
+    },
+    {
+      "zone_name": "Westar Energy",
+      "rto": "SPP",
+      "latitude": 38.4740386070879,
+      "longitude": -96.3185558456198,
+      "coefficients": {
+        "constant": 3.4022819395068877,
+        "temperature": -0.058924459085947976,
+        "temperature^2": -0.0003512603330442932,
+        "temperature^3": 0.0001443788802385022,
+        "temperature^4": -4.500216434225225e-07,
+        "weekday_effect": 0.2693559297866558
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.15803842138638668,
+        "r2": 0.8702343195247513,
+        "n_days": 306
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-31",
+        "min_temp_C": -9.443252563476562,
+        "max_temp_C": 31.061569213867188,
+        "avg_demand_GW": 3.4861891402312346,
+        "max_demand_GW": 5.162047583333333
+      }
+    },
+    {
+      "zone_name": "Nebraska Public Power District",
+      "rto": "SPP",
+      "latitude": 41.95787857507243,
+      "longitude": -103.67185463623652,
+      "coefficients": {
+        "constant": 1.7784263749297606,
+        "temperature": -0.029171804272399533,
+        "temperature^2": 0.0003236696705873635,
+        "temperature^3": 5.41513134078297e-05,
+        "temperature^4": 1.081187856440488e-06,
+        "weekday_effect": 0.13072982295190616
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.18005454378607944,
+        "r2": 0.5749642659727652,
+        "n_days": 306
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-31",
+        "min_temp_C": -26.796777725219727,
+        "max_temp_C": 26.9427433013916,
+        "avg_demand_GW": 1.8734519738200635,
+        "max_demand_GW": 2.866765791666667
+      }
+    },
+    {
+      "zone_name": "City Utilities Of Springfield, Mo",
+      "rto": "SPP",
+      "latitude": 37.258215051556824,
+      "longitude": -93.34203285688224,
+      "coefficients": {
+        "constant": 0.35542204744517003,
+        "temperature": -0.007783222670931989,
+        "temperature^2": -0.0001639722054842804,
+        "temperature^3": 2.8265308215739343e-05,
+        "temperature^4": -2.4837801969339056e-07,
+        "weekday_effect": 0.03233709825206452
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.015478886682093003,
+        "r2": 0.9164729649358171,
+        "n_days": 306
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-31",
+        "min_temp_C": -7.539316654205322,
+        "max_temp_C": 30.71307945251465,
+        "avg_demand_GW": 0.352785115120816,
+        "max_demand_GW": 0.5653296666666666
+      }
+    },
+    {
+      "zone_name": "Independence Power & Light",
+      "rto": "SPP",
+      "latitude": 39.00871376428239,
+      "longitude": -94.34615732638932,
+      "coefficients": {
+        "constant": 0.10990915307150224,
+        "temperature": -0.002671548496257899,
+        "temperature^2": -6.614606159477548e-05,
+        "temperature^3": 9.165203144217527e-06,
+        "temperature^4": -2.7833079625647057e-08,
+        "weekday_effect": 0.005285888095429867
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.005971846399331814,
+        "r2": 0.9134251611833317,
+        "n_days": 306
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-31",
+        "min_temp_C": -9.2603759765625,
+        "max_temp_C": 30.252119064331055,
+        "avg_demand_GW": 0.10753938797039019,
+        "max_demand_GW": 0.1817734166666667
+      }
+    },
+    {
+      "zone_name": "Kansis City Power & Light",
+      "rto": "SPP",
+      "latitude": 38.62792516242204,
+      "longitude": -95.06724329392456,
+      "coefficients": {
+        "constant": 1.8580131118333711,
+        "temperature": -0.04458969015172992,
+        "temperature^2": -0.0005332559122355005,
+        "temperature^3": 0.0001197811586043072,
+        "temperature^4": -6.989781200892958e-07,
+        "weekday_effect": 0.13490745294907638
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.08679048817714773,
+        "r2": 0.8891314310335611,
+        "n_days": 306
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-31",
+        "min_temp_C": -8.971535682678223,
+        "max_temp_C": 30.406967163085938,
+        "avg_demand_GW": 1.8008928997316302,
+        "max_demand_GW": 2.710665166666667
+      }
+    },
+    {
+      "zone_name": "Southwestern Public Service",
+      "rto": "SPP",
+      "latitude": 33.582902612878904,
+      "longitude": -93.9873186266136,
+      "coefficients": {
+        "constant": 3.99152393533774,
+        "temperature": -0.13811271112486273,
+        "temperature^2": 0.019899361053211214,
+        "temperature^3": -0.0011010884034882054,
+        "temperature^4": 2.0383273159816745e-05,
+        "weekday_effect": 0.11361680697940156
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.21207340302810182,
+        "r2": 0.5700269184388936,
+        "n_days": 306
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-31",
+        "min_temp_C": 0.39825311303138733,
+        "max_temp_C": 31.40360450744629,
+        "avg_demand_GW": 3.859467388968113,
+        "max_demand_GW": 5.045006833333333
+      }
+    },
+    {
+      "zone_name": "Kansas City Board Of Public Utilities",
+      "rto": "SPP",
+      "latitude": 39.03975834007563,
+      "longitude": -94.59828752968356,
+      "coefficients": {
+        "constant": 0.2576845149727603,
+        "temperature": -0.004687598643287562,
+        "temperature^2": -6.319776478113698e-05,
+        "temperature^3": 1.0179304080405734e-05,
+        "temperature^4": 6.373169906072529e-08,
+        "weekday_effect": 0.03153205998409632
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.013183457567652344,
+        "r2": 0.8617977382274271,
+        "n_days": 306
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-31",
+        "min_temp_C": -9.286792755126953,
+        "max_temp_C": 30.229990005493164,
+        "avg_demand_GW": 0.2655453721291345,
+        "max_demand_GW": 0.39166425
+      }
+    },
+    {
+      "zone_name": "Oklahoma Gas & Electric Company",
+      "rto": "SPP",
+      "latitude": 35.64130551222719,
+      "longitude": -97.06977111260888,
+      "coefficients": {
+        "constant": 4.198715654250763,
+        "temperature": -0.08341120221224438,
+        "temperature^2": -0.0023513499935812424,
+        "temperature^3": 0.0002932697694341903,
+        "temperature^4": -2.988850302769376e-06,
+        "weekday_effect": 0.20737711226772357
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.1559046589807542,
+        "r2": 0.9024005405131321,
+        "n_days": 306
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-31",
+        "min_temp_C": -6.310028076171875,
+        "max_temp_C": 31.96076202392578,
+        "avg_demand_GW": 3.869097605800159,
+        "max_demand_GW": 5.570288708333333
+      }
+    },
+    {
+      "zone_name": "Empire District Electric",
+      "rto": "SPP",
+      "latitude": 36.338951467859985,
+      "longitude": -94.25583474814728,
+      "coefficients": {
+        "constant": 0.6847721572181357,
+        "temperature": -0.018209306737544815,
+        "temperature^2": -0.0004901676627545904,
+        "temperature^3": 5.3075375175918126e-05,
+        "temperature^4": -3.7334496318034484e-07,
+        "weekday_effect": 0.046526613840182696
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.04098518814520755,
+        "r2": 0.8089501827170441,
+        "n_days": 306
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-31",
+        "min_temp_C": -5.7896575927734375,
+        "max_temp_C": 30.696863174438477,
+        "avg_demand_GW": 0.5832924264017627,
+        "max_demand_GW": 0.8905186666666668
+      }
+    },
+    {
+      "zone_name": "Western Farmers Electric Cooperative",
+      "rto": "SPP",
+      "latitude": 34.74915640009693,
+      "longitude": -95.55702063736275,
+      "coefficients": {
+        "constant": 1.421954874703852,
+        "temperature": -0.03873923553947878,
+        "temperature^2": 0.00020704689581939152,
+        "temperature^3": 4.435364126195435e-05,
+        "temperature^4": -3.179612531732082e-07,
+        "weekday_effect": 0.010463997057982764
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.05198122136302543,
+        "r2": 0.8193003416065543,
+        "n_days": 306
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-31",
+        "min_temp_C": -4.668684482574463,
+        "max_temp_C": 31.201101303100586,
+        "avg_demand_GW": 1.1364101742023174,
+        "max_demand_GW": 1.6730272083333333
+      }
+    },
+    {
+      "zone_name": "Missouri Public Service",
+      "rto": "SPP",
+      "latitude": 39.18277048859855,
+      "longitude": -94.0745936808676,
+      "coefficients": {
+        "constant": 1.0776317490109624,
+        "temperature": -0.027601162179704878,
+        "temperature^2": -0.00023230188928448248,
+        "temperature^3": 6.3325563074659e-05,
+        "temperature^4": -3.3406494249381724e-07,
+        "weekday_effect": 0.07209645595717964
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.046919603102984125,
+        "r2": 0.8859753411760738,
+        "n_days": 306
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-31",
+        "min_temp_C": -9.205352783203125,
+        "max_temp_C": 30.14341163635254,
+        "avg_demand_GW": 1.0144328609392947,
+        "max_demand_GW": 1.432877875
+      }
+    },
+    {
+      "zone_name": "Wapa Upper Great Plains East",
+      "rto": "SPP",
+      "latitude": 44.571302306588834,
+      "longitude": -100.14054889079917,
+      "coefficients": {
+        "constant": 3.9922769069217403,
+        "temperature": -0.030510985074835864,
+        "temperature^2": -0.0009190927828299959,
+        "temperature^3": 1.3565565432593702e-05,
+        "temperature^4": 2.1413331632677525e-06,
+        "weekday_effect": 0.1442421079018194
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.20349769786750832,
+        "r2": 0.6579198303437928,
+        "n_days": 306
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-31",
+        "min_temp_C": -24.293121337890625,
+        "max_temp_C": 29.06013298034668,
+        "avg_demand_GW": 3.939984999632105,
+        "max_demand_GW": 4.811435583333333
+      }
+    },
+    {
+      "zone_name": "Central South And West Services",
+      "rto": "SPP",
+      "latitude": 35.906896693406885,
+      "longitude": -98.68703895361288,
+      "coefficients": {
+        "constant": 5.438172839805823,
+        "temperature": -0.11195608840247925,
+        "temperature^2": -0.001881956783528592,
+        "temperature^3": 0.00038796308187605765,
+        "temperature^4": -4.451275387634635e-06,
+        "weekday_effect": 0.26349385348688226
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.3652366937730284,
+        "r2": 0.7677919924684882,
+        "n_days": 306
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-31",
+        "min_temp_C": -8.79214096069336,
+        "max_temp_C": 31.4246883392334,
+        "avg_demand_GW": 5.20800406625718,
+        "max_demand_GW": 7.737703499999999
+      }
+    },
+    {
+      "zone_name": "BALTIMORE GAS & ELECTRIC CO",
+      "rto": "PJM",
+      "latitude": 39.32717860538136,
+      "longitude": -76.65884617284777,
+      "coefficients": {
+        "constant": 3.9889034281397455,
+        "temperature": -0.10684454399083902,
+        "temperature^2": -0.0046708529001193945,
+        "temperature^3": 0.0004881729552925072,
+        "temperature^4": -5.847670392996415e-06,
+        "weekday_effect": 0.1662482622003836
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.1357532346418722,
+        "r2": 0.921916083901082,
+        "n_days": 305
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-30",
+        "min_temp_C": -6.323675632476807,
+        "max_temp_C": 30.042940139770508,
+        "avg_demand_GW": 3.2901759296987403,
+        "max_demand_GW": 4.878936541666667
+      }
+    },
+    {
+      "zone_name": "METROPOLITAN EDISON CO",
+      "rto": "PJM",
+      "latitude": 40.16681896203098,
+      "longitude": -76.5065856378775,
+      "coefficients": {
+        "constant": 1.8622171656438866,
+        "temperature": -0.04483853558586902,
+        "temperature^2": -0.0007866932110686247,
+        "temperature^3": 0.00010039321674148778,
+        "temperature^4": -1.7850791600496397e-07,
+        "weekday_effect": 0.20193739777074066
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.08050574411751245,
+        "r2": 0.8602444457753846,
+        "n_days": 305
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-30",
+        "min_temp_C": -8.021998405456543,
+        "max_temp_C": 28.253097534179688,
+        "avg_demand_GW": 1.6955358242584937,
+        "max_demand_GW": 2.296820375
+      }
+    },
+    {
+      "zone_name": "PENNSYLVANIA ELECTRIC CO",
+      "rto": "PJM",
+      "latitude": 40.98774794576256,
+      "longitude": -78.89264742895844,
+      "coefficients": {
+        "constant": 4.179442264414976,
+        "temperature": -0.09403906861121725,
+        "temperature^2": -0.00026242314979056604,
+        "temperature^3": 0.00023700216022460934,
+        "temperature^4": 9.670346775097922e-07,
+        "weekday_effect": 0.2949395860343806
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.37218587512939827,
+        "r2": 0.6274175995088769,
+        "n_days": 305
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-30",
+        "min_temp_C": -10.588948249816895,
+        "max_temp_C": 25.456954956054688,
+        "avg_demand_GW": 4.147312554786172,
+        "max_demand_GW": 6.361671958333333
+      }
+    },
+    {
+      "zone_name": "PPL ELECTRIC UTILITIES CORP",
+      "rto": "PJM",
+      "latitude": 40.951011027241314,
+      "longitude": -76.34505815719535,
+      "coefficients": {
+        "constant": 4.748262401059347,
+        "temperature": -0.1254795975947064,
+        "temperature^2": -3.351066990594065e-05,
+        "temperature^3": 0.00018353305617328002,
+        "temperature^4": 1.1189364282368882e-06,
+        "weekday_effect": 0.41832500672688555
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.19892603673658438,
+        "r2": 0.8622308917243136,
+        "n_days": 305
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-30",
+        "min_temp_C": -11.388773918151855,
+        "max_temp_C": 25.97064208984375,
+        "avg_demand_GW": 4.396842130465906,
+        "max_demand_GW": 5.986495916666667
+      }
+    },
+    {
+      "zone_name": "POTOMAC ELECTRIC POWER CO",
+      "rto": "PJM",
+      "latitude": 38.96951500934232,
+      "longitude": -77.02688963749479,
+      "coefficients": {
+        "constant": 2.983081691371533,
+        "temperature": -0.07471026910118243,
+        "temperature^2": -0.003421265995383619,
+        "temperature^3": 0.00039365013788618375,
+        "temperature^4": -5.642601709139248e-06,
+        "weekday_effect": 0.2217262213354672
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.10198429422190486,
+        "r2": 0.9229271274954428,
+        "n_days": 305
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-30",
+        "min_temp_C": -5.821571350097656,
+        "max_temp_C": 30.96549415588379,
+        "avg_demand_GW": 2.6310228981413637,
+        "max_demand_GW": 3.95424525
+      }
+    },
+    {
+      "zone_name": "ROCKLAND ELECTRIC CO",
+      "rto": "PJM",
+      "latitude": 41.088049061759214,
+      "longitude": -74.27252333442271,
+      "coefficients": {
+        "constant": 0.14189148799365175,
+        "temperature": -0.0020721866037018725,
+        "temperature^2": -1.7823775043344125e-05,
+        "temperature^3": 3.6592475112582965e-06,
+        "temperature^4": 1.9094937077256567e-07,
+        "weekday_effect": 0.013115203151353207
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.00723292449338336,
+        "r2": 0.932082721801183,
+        "n_days": 305
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-30",
+        "min_temp_C": -12.599601745605469,
+        "max_temp_C": 27.380434036254883,
+        "avg_demand_GW": 0.15197027740817295,
+        "max_demand_GW": 0.26787216666666663
+      }
+    },
+    {
+      "zone_name": "DELMARVA POWER",
+      "rto": "PJM",
+      "latitude": 38.844262792111785,
+      "longitude": -75.72819673868351,
+      "coefficients": {
+        "constant": 2.521370531511703,
+        "temperature": -0.07270151785224978,
+        "temperature^2": -0.0025345496640732305,
+        "temperature^3": 0.0002347461379664688,
+        "temperature^4": -1.4715439653753312e-06,
+        "weekday_effect": 0.09981381589734453
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.09176858990866106,
+        "r2": 0.922501096805139,
+        "n_days": 305
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-30",
+        "min_temp_C": -5.24114990234375,
+        "max_temp_C": 29.193082809448242,
+        "avg_demand_GW": 1.9583445222271323,
+        "max_demand_GW": 2.9173926249999997
+      }
+    },
+    {
+      "zone_name": "DUQUESNE LIGHT CO",
+      "rto": "PJM",
+      "latitude": 40.53373983392697,
+      "longitude": -80.11702363662225,
+      "coefficients": {
+        "constant": 1.4894634613162165,
+        "temperature": -0.02491538902650311,
+        "temperature^2": -0.00042983550895916295,
+        "temperature^3": 5.8172073568412746e-05,
+        "temperature^4": 8.007905282163995e-07,
+        "weekday_effect": 0.08617405039898027
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.06076247234475889,
+        "r2": 0.8555780278991205,
+        "n_days": 305
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-30",
+        "min_temp_C": -8.964855194091797,
+        "max_temp_C": 26.31123924255371,
+        "avg_demand_GW": 1.4498007491798528,
+        "max_demand_GW": 2.0301624583333333
+      }
+    },
+    {
+      "zone_name": "JERSEY CENTRAL POWER & LT CO",
+      "rto": "PJM",
+      "latitude": 40.85436187927822,
+      "longitude": -74.74185543951343,
+      "coefficients": {
+        "constant": 2.4336172459671013,
+        "temperature": -0.05097090155438248,
+        "temperature^2": -0.001022652331252579,
+        "temperature^3": 9.621579844256995e-05,
+        "temperature^4": 3.056492007189736e-06,
+        "weekday_effect": 0.14382080445634096
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.15232372771884622,
+        "r2": 0.8784136169758805,
+        "n_days": 305
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-30",
+        "min_temp_C": -11.143776893615723,
+        "max_temp_C": 27.8660831451416,
+        "avg_demand_GW": 2.346082504834165,
+        "max_demand_GW": 4.003891916666666
+      }
+    },
+    {
+      "zone_name": "ATLANTIC CITY ELECTRIC CO",
+      "rto": "PJM",
+      "latitude": 39.52561651789069,
+      "longitude": -74.89018140548012,
+      "coefficients": {
+        "constant": 1.0530942329647015,
+        "temperature": -0.015032716161411348,
+        "temperature^2": -0.001927506622503808,
+        "temperature^3": 0.00013010144475712044,
+        "temperature^4": -5.312104962502583e-07,
+        "weekday_effect": 0.022733345416909974
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.07116035740706952,
+        "r2": 0.8909881704175869,
+        "n_days": 305
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-30",
+        "min_temp_C": -6.7788519859313965,
+        "max_temp_C": 29.730613708496094,
+        "avg_demand_GW": 0.9726044714875268,
+        "max_demand_GW": 1.7082092500000001
+      }
+    },
+    {
+      "zone_name": "Dominion Energy",
+      "rto": "PJM",
+      "latitude": 37.309416197974706,
+      "longitude": -77.61224822813108,
+      "coefficients": {
+        "constant": 15.762159564384518,
+        "temperature": -0.3096874368422157,
+        "temperature^2": -0.02122162020522968,
+        "temperature^3": 0.0017450755214517594,
+        "temperature^4": -2.1476437301717294e-05,
+        "weekday_effect": 0.5481367450535438
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.438152602037133,
+        "r2": 0.9126456655283789,
+        "n_days": 304
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-30",
+        "min_temp_C": -2.422175168991089,
+        "max_temp_C": 29.807336807250977,
+        "avg_demand_GW": 12.905942945803298,
+        "max_demand_GW": 17.362242916666666
+      }
+    },
+    {
+      "zone_name": "Alleghany Power",
+      "rto": "PJM",
+      "latitude": 39.30998111991121,
+      "longitude": -79.62242941985879,
+      "coefficients": {
+        "constant": 5.720646525304792,
+        "temperature": -0.1304480751879266,
+        "temperature^2": 0.0003099019754336746,
+        "temperature^3": 1.806512120073344e-05,
+        "temperature^4": 1.2231423250449842e-05,
+        "weekday_effect": 0.43949965514830913
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.267832228942719,
+        "r2": 0.8239058565106875,
+        "n_days": 305
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-30",
+        "min_temp_C": -9.868915557861328,
+        "max_temp_C": 22.833044052124023,
+        "avg_demand_GW": 5.385540081466619,
+        "max_demand_GW": 7.321062875
+      }
+    },
+    {
+      "zone_name": "OHIO VALLEY ELECTRIC CORP",
+      "rto": "PJM",
+      "latitude": 39.077459151151864,
+      "longitude": -83.06688640018474,
+      "coefficients": {
+        "constant": 0.041405394783238486,
+        "temperature": -0.0018089074409536115,
+        "temperature^2": 0.00022232276014249238,
+        "temperature^3": -1.4252064656145572e-05,
+        "temperature^4": 3.184514181106683e-07,
+        "weekday_effect": 0.003603143314223007
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.006090667409258336,
+        "r2": 0.29374804641212204,
+        "n_days": 305
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-30",
+        "min_temp_C": -3.7768478393554688,
+        "max_temp_C": 27.3739070892334,
+        "avg_demand_GW": 0.03738319101924447,
+        "max_demand_GW": 0.06783333333333334
+      }
+    },
+    {
+      "zone_name": "COMMONWEALTH EDISON CO",
+      "rto": "PJM",
+      "latitude": 41.75064076703631,
+      "longitude": -88.82931305889772,
+      "coefficients": {
+        "constant": 9.763466135926862,
+        "temperature": -0.143880714248396,
+        "temperature^2": -0.0023423519175363996,
+        "temperature^3": 0.00019044588139934668,
+        "temperature^4": 1.0564590475343406e-05,
+        "weekday_effect": 1.0188555273903992
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.6988292018712813,
+        "r2": 0.7145504883947261,
+        "n_days": 308
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-30",
+        "min_temp_C": -18.957740783691406,
+        "max_temp_C": 27.406591415405273,
+        "avg_demand_GW": 10.13080564672313,
+        "max_demand_GW": 14.956547458333333
+      }
+    },
+    {
+      "zone_name": "DAYTON POWER & LIGHT CO",
+      "rto": "PJM",
+      "latitude": 39.97942927864917,
+      "longitude": -84.08291419030768,
+      "coefficients": {
+        "constant": 1.905611911637718,
+        "temperature": -0.036400042715062565,
+        "temperature^2": -0.0005164689247422116,
+        "temperature^3": 6.885519442102093e-05,
+        "temperature^4": 8.157951431150418e-07,
+        "weekday_effect": 0.24339825543670465
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.08481018837136096,
+        "r2": 0.8428609309325084,
+        "n_days": 305
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-30",
+        "min_temp_C": -7.10220193862915,
+        "max_temp_C": 26.29323387145996,
+        "avg_demand_GW": 1.8839402196483725,
+        "max_demand_GW": 2.4972083333333335
+      }
+    },
+    {
+      "zone_name": "East Kentucky Power Coop",
+      "rto": "PJM",
+      "latitude": 37.761653121262626,
+      "longitude": -84.4939829433795,
+      "coefficients": {
+        "constant": 1.9950837242537764,
+        "temperature": -0.04408764968328772,
+        "temperature^2": -0.0036715335322569033,
+        "temperature^3": 0.0002675040771787546,
+        "temperature^4": -3.1760886292208563e-06,
+        "weekday_effect": 0.06888818659250151
+      },
+      "fit_statistics": {
+        "rmse_GW": 0.07300015272339072,
+        "r2": 0.8997188164061453,
+        "n_days": 305
+      },
+      "data_range": {
+        "start_date": "2023-01-01",
+        "end_date": "2023-12-30",
+        "min_temp_C": -2.256322145462036,
+        "max_temp_C": 27.55175018310547,
+        "avg_demand_GW": 1.509119817957472,
+        "max_demand_GW": 2.233192125
+      }
+    }
+  ],
+  "errors": [
+    "Error fitting zone Duke Energy Ohio/Kentucky: [Errno 2] No such file or directory: 'plots/temp_vs_demand_fit_duke energy ohio/kentucky.pdf'"
+  ],
+  "metadata": {
+    "n_zones_total": 69,
+    "n_zones_successful": 68,
+    "n_zones_failed": 1
+  }
+}
