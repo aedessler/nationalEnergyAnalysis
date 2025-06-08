@@ -6,10 +6,10 @@ from datetime import datetime
 import os
 
 # Configuration
-YEAR = 2024  # Year to analyze
-POLY_DEGREE = 3  # Degree of polynomial fit to use
+YEAR = 2023  # Year to analyze
+POLY_DEGREE = 4  # Degree of polynomial fit to use
 SUMMER_MONTHS = [6, 7, 8, 9]  # June through September
-print(f'year = {YEAR}')
+print(f'year = {YEAR}, poly_degree = {POLY_DEGREE}')
 
 # RTO name mapping (from file names to short names)
 RTO_NAME_MAPPING = {
@@ -49,7 +49,7 @@ def get_price(demand, pwlf_params):
     
     # For values below minimum breakpoint
     if demand < breakpoints[0]:
-        return slopes[0] * demand + intercepts[0]
+        return max(0, slopes[0] * demand + intercepts[0]) # don't return a value < 0
     
     # For values above maximum breakpoint
     if demand > breakpoints[-1]:
@@ -65,15 +65,15 @@ def get_price(demand, pwlf_params):
 
 # Load demand-temperature fits
 #print("Loading demand-temperature fits...")
-filename = f'polynomial_fits_RTO_{YEAR}_degree{POLY_DEGREE}.json'
+filename = f'polynomial_fits/polynomial_fits_RTO_{YEAR}_degree{POLY_DEGREE}.json'
 fits = json.load(open(filename, 'r'))
 demand_fits = {fit['rto']: {'coefficients': fit['coefficients'], 'data_range': fit['data_range']} 
               for fit in fits['fits']}
 
 # Load price-demand piecewise linear fits
 #print("Loading price-demand piecewise linear fits...")
-with open(f'price_demand_pwlf_{YEAR}.json', 'r') as f:
-    price_demand = json.load(f)
+filename = f'gridstatus_price/price_demand_pwlf_{YEAR}.json'
+price_demand = json.load(open(filename, 'r'))
 
 # Initialize results dictionary
 results = {rto: {'total_cost': 0, 'total_demand': 0} for rto in demand_fits.keys()}
@@ -165,11 +165,11 @@ results_df['recent'] /= 1e9
 results_df['change'] = results_df.recent - results_df.baseline
 results_df = results_df[['baseline', 'recent', 'change','pct_change']]
 
-population_dict = {
-    'RTO': ['CAISO', 'ERCOT', 'ISONE', 'MISO', 'NYISO', 'PJM', 'SPP'],
-    'population': [32, 26, 15, 45, 20, 65, 19]
-}
-population_df = pd.DataFrame(population_dict)
-population_df.set_index('RTO', inplace=True)
-
 print(results_df)
+
+# population_dict = {
+#     'RTO': ['CAISO', 'ERCOT', 'ISONE', 'MISO', 'NYISO', 'PJM', 'SPP'],
+#     'population': [32, 26, 15, 45, 20, 65, 19]
+# }
+# population_df = pd.DataFrame(population_dict)
+# population_df.set_index('RTO', inplace=True)

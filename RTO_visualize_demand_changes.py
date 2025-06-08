@@ -200,6 +200,8 @@ def create_combined_visualization(df, month_cols, output_dir, year, degree_of_fi
     plt.close()
 
 if __name__ == "__main__":
-    year = 2024  # which year to use for the demand & temp data in the polynomial fit
-    degree_of_fit = 3  # which degree of polynomial fit to use
-    main(year, degree_of_fit) 
+    # Loop over years and polynomial degrees
+    for year in [2023, 2024]:
+        for degree_of_fit in [3, 4]:
+            print(f"\nProcessing year {year} with polynomial degree {degree_of_fit}")
+            main(year, degree_of_fit)

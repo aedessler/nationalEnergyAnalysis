@@ -66,9 +66,9 @@ visualize_RTO_demand_changes.py contains code to generate plots of the change, w
 The program lets you select which fit json you're using to do the calculation.
 
 ### Price vs. demand
-To calculate the relation between price and demand, process_price_demand.py calculates the demand-weighted price and demand (daily average) and writes them into a csv file (daily_price_demand_YYYY.csv).
+To calculate the relation between price and demand, process_price_demand.py calculates the demand-weighted price and demand (daily average) and writes them into a csv file (gridstatus_price/daily_price_demand_YYYY.csv).
 
-plot_price.ipynb contains code to plot up the relationship. It also calculates a smoothed fit to the summer data, which is stored in price_demand_smooth.csv.
+plot_price.ipynb contains code to plot up the relationship. It also calculates a smoothed fit to the summer data, which is stored in gridstatus_price/price_demand_smooth.csv.
 
 ### Total change in wholesale summer cost
 This is calculated in calculate_total_cost_change_pwlf.ipynb.

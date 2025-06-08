@@ -7,16 +7,21 @@ import re
 # Set the year to process (2023 or 2024)
 year = 2024
 
-# Paths to data directories
-PRICE_DIR = 'price'
-DEMAND_DIR = 'demand'
+# Paths to data directories - updated for gridstatus data
+PRICE_DIR = 'gridstatus_price'
+DEMAND_DIR = 'gridstatus_demand'
 # Output file generated based on selected year
 OUTPUT_FILE = f'daily_price_demand_{year}.csv'
 
-# Define RTO-specific total demand column names
+# Define RTO-specific total demand column names - updated for gridstatus format
 RTO_TOTAL_COLUMNS = {
-    'NYISO': 'NYISO total demand',
-    'ISONE': 'isone total'
+    'NYISO': 'NYISO Total Actual Load (MW)',
+    'ISONE': 'ISONE Total Actual Load (MW)',
+    'PJM': 'PJM Total Actual Load (MW)',
+    'MISO': 'MISO Total Actual Load (MW)',
+    'ERCOT': 'ERCOT Total Actual Load (MW)',
+    'CAISO': 'CAISO Total Actual Load (MW)',
+    'SPP': 'SPP Total Actual Load (MW)'
 }
 
 def get_rto_from_filename(filename):
@@ -43,7 +48,7 @@ def match_price_demand_files(price_files, demand_files, target_year):
 
 def process_price_data(price_file):
     """Process price data: average all applicable price columns"""
-    # Read price data
+    # Read price data - gridstatus files have 3 header rows
     price_df = pd.read_csv(os.path.join(PRICE_DIR, price_file), skiprows=3)
     
     # Extract date and hour columns
@@ -53,13 +58,9 @@ def process_price_data(price_file):
     hour_col_idx = price_df.columns.get_loc('Hour Number')
     price_cols = price_df.columns[hour_col_idx + 1:]
     
-    # Drop columns with "energy", "loss", or "congestion" in the name
-    filtered_price_cols = [col for col in price_cols 
-                          if not any(term in col.lower() 
-                                    for term in ['energy', 'loss', 'congestion'])]
-    
-    # Calculate average price across filtered columns
-    price_df['Average Price'] = price_df[filtered_price_cols].mean(axis=1)
+    # For gridstatus data, we typically have one main price column per RTO
+    # Calculate average price across all price columns (in case there are multiple)
+    price_df['Average Price'] = price_df[price_cols].mean(axis=1)
     
     # Keep only date, hour, and average price
     price_df = price_df[['Local Date', 'Hour Number', 'Average Price']]
@@ -68,21 +69,27 @@ def process_price_data(price_file):
 
 def process_demand_data(demand_file, rto):
     """Process demand data: extract the total column"""
-    # Read demand data
+    # Read demand data - gridstatus files have 3 header rows
     demand_df = pd.read_csv(os.path.join(DEMAND_DIR, demand_file), skiprows=3)
     
     # Extract date and hour columns
     demand_df['Local Date'] = pd.to_datetime(demand_df['Local Date'])
     
-    # Find total demand column (it can vary by RTO)
+    # Find total demand column using the RTO mapping
     total_col = None
     
     # Check if we have a predefined column name for this RTO
-    # Try to find the total column by scanning through column names
-    for col in demand_df.columns:
-        if 'total' in col.lower():
-            total_col = col
-            break
+    if rto in RTO_TOTAL_COLUMNS:
+        expected_col = RTO_TOTAL_COLUMNS[rto]
+        if expected_col in demand_df.columns:
+            total_col = expected_col
+    
+    # If not found, try to find the total column by scanning through column names
+    if not total_col:
+        for col in demand_df.columns:
+            if 'total' in col.lower() and 'load' in col.lower():
+                total_col = col
+                break
     
     if not total_col:
         raise ValueError(f"Could not find total demand column in {demand_file}. Columns: {demand_df.columns}")
@@ -135,6 +142,10 @@ def main():
         print(f"No matching price and demand files found for {year}.")
         return
     
+    print(f"Found {len(matched_files)} matching RTO pairs:")
+    for price_file, demand_file, rto in matched_files:
+        print(f"  {rto}: {price_file} + {demand_file}")
+    
     # Process each RTO's data
     all_daily_data = []
     
@@ -158,6 +169,8 @@ def main():
             # Add to list of all RTOs
             all_daily_data.append(daily_data)
             
+            print(f"  Successfully processed {len(daily_data)} days of data for {rto}")
+            
         except Exception as e:
             print(f"Error processing {rto}: {e}")
     
@@ -180,6 +193,7 @@ def main():
     combined_daily_data['Total Demand'] = combined_daily_data['Total Demand'] / 1000
     combined_daily_data.to_csv(OUTPUT_FILE, index=False)
     print(f"Daily price and demand data saved to {OUTPUT_FILE}")
+    print(f"Total records: {len(combined_daily_data)}")
 
 if __name__ == "__main__":
     main() 
