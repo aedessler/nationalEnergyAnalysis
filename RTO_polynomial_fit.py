@@ -141,7 +141,7 @@ def fit_zone(demand_file, temp_file, max_degree=4):
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(15, 6))
     
     # Add overall title with zone info
-    fig.suptitle(f'Temperature-Demand Relationship for {rto_name} (Degree {max_degree} Polynomial)', 
+    fig.suptitle(f'Temperature-Demand Relationship for {rto_name} {year} (Degree {max_degree} Polynomial)', 
                  fontsize=14, y=1.05)
     
     # Get min and max temperature values and extend by 5 degrees
@@ -202,11 +202,11 @@ def fit_zone(demand_file, temp_file, max_degree=4):
     os.makedirs('plots', exist_ok=True)
     
     plt.tight_layout()
-    plt.savefig(f'plots/temp_vs_demand_fit_{rto_name.lower()}_degree{max_degree}.pdf', 
+    plt.savefig(f'plots/temp_vs_demand_fit_{rto_name.lower()}_{year}_degree{max_degree}.pdf', 
                 dpi=300, bbox_inches='tight')
     plt.close()
     
-    print(f"\nPlot saved as plots/temp_vs_demand_fit_{rto_name.lower()}_degree{max_degree}.pdf")
+    print(f"\nPlot saved as plots/temp_vs_demand_fit_{rto_name.lower()}_{year}_degree{max_degree}.pdf")
     print(f"RMSE: {rmse:.1f} GW")
     print(f"Weekday Effect: {weekday_effect_size:.2f} GW")
     print(f"Temp range in data: {np.min(X):.1f}°C to {np.max(X):.1f}°C")
@@ -325,7 +325,7 @@ year = 2024 ## which year to use for the demand & temp data
 FILE_MAPPING = {
     f'caiso_load_act_hr_{year}.csv': 'CALIFORNIA_INDEPENDENT_SYSTEM_OPERATOR_weighted_temp.nc',
     f'ercot_load_act_hr_{year}.csv': 'ELECTRIC_RELIABILITY_COUNCIL_OF_TEXAS,_INC._weighted_temp.nc',
-    f'isone_load_actr_hr_{year}.csv': 'ISO_NEW_ENGLAND_INC._weighted_temp.nc',
+    f'isone_load_act_hr_{year}.csv': 'ISO_NEW_ENGLAND_INC._weighted_temp.nc',
     f'miso_load_act_hr_{year}.csv': 'MIDCONTINENT_INDEPENDENT_TRANSMISSION_SYSTEM_OPERATOR,_INC.._weighted_temp.nc',
     f'nyiso_load_act_hr_{year}.csv': 'NEW_YORK_INDEPENDENT_SYSTEM_OPERATOR_weighted_temp.nc',
     f'pjm_load_act_hr_{year}.csv': 'PJM_INTERCONNECTION,_LLC_weighted_temp.nc',

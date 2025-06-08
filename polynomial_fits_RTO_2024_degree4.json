@@ -3,18 +3,19 @@
     {
       "rto": "CAISO",
       "fit_details": {
-        "max_degree": 3
+        "max_degree": 4
       },
       "coefficients": {
-        "constant": 39.28991950660614,
-        "temperature": -3.043417658346915,
-        "temperature^2": 0.12880962593220843,
-        "temperature^3": -0.0007603184365440345,
-        "weekday_effect": 2.161913206956259
+        "constant": -19.564961262593062,
+        "temperature": 12.905501145069078,
+        "temperature^2": -1.4217855024224622,
+        "temperature^3": 0.0634159550065044,
+        "temperature^4": -0.000957781251503286,
+        "weekday_effect": 2.188773530161875
       },
       "fit_statistics": {
-        "rmse_GW": 1.3232266155564567,
-        "r2": 0.8877018028848089,
+        "rmse_GW": 1.245873809673798,
+        "r2": 0.9004474380021339,
         "n_days": 366
       },
       "data_range": {
@@ -29,18 +30,19 @@
     {
       "rto": "ERCOT",
       "fit_details": {
-        "max_degree": 3
+        "max_degree": 4
       },
       "coefficients": {
-        "constant": 63.72406703939916,
-        "temperature": -2.1543958885528607,
-        "temperature^2": 0.03500285626418839,
-        "temperature^3": 0.0012341384636433105,
-        "weekday_effect": 1.5243086101074947
+        "constant": 64.76749872335004,
+        "temperature": -1.6296022170969928,
+        "temperature^2": -0.06990224108509253,
+        "temperature^3": 0.0067418721812997325,
+        "temperature^4": -8.804283570568088e-05,
+        "weekday_effect": 1.645277324810876
       },
       "fit_statistics": {
-        "rmse_GW": 1.921265192949012,
-        "r2": 0.943891479696636,
+        "rmse_GW": 1.8532631892137563,
+        "r2": 0.9477930424004488,
         "n_days": 366
       },
       "data_range": {
@@ -55,18 +57,19 @@
     {
       "rto": "ISONE",
       "fit_details": {
-        "max_degree": 3
+        "max_degree": 4
       },
       "coefficients": {
-        "constant": 13.150679715562488,
-        "temperature": -0.32543106433697544,
-        "temperature^2": -0.004582841628823153,
-        "temperature^3": 0.0009103310294817022,
-        "weekday_effect": 0.8371450226776872
+        "constant": 13.049947549238496,
+        "temperature": -0.3051132336450658,
+        "temperature^2": -0.001464446135038245,
+        "temperature^3": 0.00046100627889424507,
+        "temperature^4": 1.2137267744368816e-05,
+        "weekday_effect": 0.8503222843775388
       },
       "fit_statistics": {
-        "rmse_GW": 0.7117143725591414,
-        "r2": 0.872041313097144,
+        "rmse_GW": 0.7055450599522336,
+        "r2": 0.8742500522797905,
         "n_days": 366
       },
       "data_range": {
@@ -81,18 +84,19 @@
     {
       "rto": "MISO",
       "fit_details": {
-        "max_degree": 3
+        "max_degree": 4
       },
       "coefficients": {
-        "constant": 75.8417450354966,
-        "temperature": -1.5497145850955212,
-        "temperature^2": 0.0037474724776747365,
-        "temperature^3": 0.0028380397830769415,
-        "weekday_effect": 5.336264605220515
+        "constant": 75.23568326220523,
+        "temperature": -1.386906949376756,
+        "temperature^2": 0.008318260076471566,
+        "temperature^3": 0.0013755365038614863,
+        "temperature^4": 4.29566638494825e-05,
+        "weekday_effect": 5.299694529459381
       },
       "fit_statistics": {
-        "rmse_GW": 2.126779469656033,
-        "r2": 0.9347550464222676,
+        "rmse_GW": 2.086458934056795,
+        "r2": 0.9372054878966855,
         "n_days": 366
       },
       "data_range": {
@@ -107,18 +111,19 @@
     {
       "rto": "NYISO",
       "fit_details": {
-        "max_degree": 3
+        "max_degree": 4
       },
       "coefficients": {
-        "constant": 17.442795490997796,
-        "temperature": -0.34309106878444073,
-        "temperature^2": -0.007928572507036973,
-        "temperature^3": 0.0010557696702949695,
-        "weekday_effect": 1.0816360829160336
+        "constant": 17.39817251178537,
+        "temperature": -0.34138832390608864,
+        "temperature^2": -0.005691560611048823,
+        "temperature^3": 0.0008424169681963548,
+        "temperature^4": 4.954926653051926e-06,
+        "weekday_effect": 1.0845589545740095
       },
       "fit_statistics": {
-        "rmse_GW": 0.6338553564033805,
-        "r2": 0.9319670534011675,
+        "rmse_GW": 0.6329377521550331,
+        "r2": 0.9321638873746176,
         "n_days": 366
       },
       "data_range": {
@@ -133,18 +138,19 @@
     {
       "rto": "PJM",
       "fit_details": {
-        "max_degree": 3
+        "max_degree": 4
       },
       "coefficients": {
-        "constant": 95.546469867285,
-        "temperature": -2.348211200225027,
-        "temperature^2": 0.0004347007529108531,
-        "temperature^3": 0.004219134841920649,
-        "weekday_effect": 6.460332643594551
+        "constant": 95.98285267469238,
+        "temperature": -2.3933923193098305,
+        "temperature^2": -0.014613039357742831,
+        "temperature^3": 0.005827321279241679,
+        "temperature^4": -3.839525231354767e-05,
+        "weekday_effect": 6.448112477638489
       },
       "fit_statistics": {
-        "rmse_GW": 2.793794773388272,
-        "r2": 0.9465969932171173,
+        "rmse_GW": 2.7786073721287563,
+        "r2": 0.9471760252992888,
         "n_days": 366
       },
       "data_range": {
@@ -159,18 +165,19 @@
     {
       "rto": "SPP",
       "fit_details": {
-        "max_degree": 3
+        "max_degree": 4
       },
       "coefficients": {
-        "constant": 32.91858790772868,
-        "temperature": -0.6950702799616447,
-        "temperature^2": 0.0077334806799441574,
-        "temperature^3": 0.0009401403698829094,
-        "weekday_effect": 1.6197305555010275
+        "constant": 32.94207579022928,
+        "temperature": -0.7019725929903687,
+        "temperature^2": 0.0077511954031550725,
+        "temperature^3": 0.000976292990786897,
+        "temperature^4": -1.066578378899933e-06,
+        "weekday_effect": 1.6201756778080978
       },
       "fit_statistics": {
-        "rmse_GW": 0.9832665156768821,
-        "r2": 0.9490032279035834,
+        "rmse_GW": 0.9831107873478947,
+        "r2": 0.9490193802144428,
         "n_days": 366
       },
       "data_range": {
@@ -185,7 +192,7 @@
   ],
   "errors": [],
   "metadata": {
-    "max_degree": 3,
+    "max_degree": 4,
     "n_zones_total": 7,
     "n_zones_successful": 7,
     "n_zones_failed": 0
