@@ -261,7 +261,7 @@ def main(max_degree=4):
     print(f"Starting polynomial fits with max degree: {max_degree}")
     
     # Hardcoded directory paths
-    demand_dir = 'demand'
+    demand_dir = 'gridstatus_demand'
     weighted_temps_dir = 'RTO temp calc/weighted_temps'
     
     print(f"\nUsing demand directory: {demand_dir}")
