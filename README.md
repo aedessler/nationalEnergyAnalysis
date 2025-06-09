@@ -1,80 +1,242 @@
-# National Energy Analysis
+# National Energy-Temperature Analysis
 
-## Details of Calculating These Numbers
+A comprehensive analysis of climate change impacts on electricity demand and wholesale costs across major U.S. Regional Transmission Organizations (RTOs). This project combines temperature data, electricity demand modeling, and price analysis to quantify how rising temperatures affect energy markets.
 
-### ERA5 temperatures
-These are calculated using google servers on cocalc. The code is in /RTOavgTemp/era5-processor.py on cocalc. This program writes out one year (in monthly files).
+## Project Overview
 
-run-era5-years.sh starts multiple years. check-complete-years.sh checks to see which years have all 12 months, and remove-empty-files.sh deletes files with small length.
+This analysis examines the relationship between temperature and electricity demand across seven major RTOs (CAISO, ERCOT, ISONE, MISO, NYISO, PJM, SPP) and projects the economic impacts of climate change on wholesale electricity costs.
 
-The files are stored in /data on the server, so you need to rsync the data to your local machine. Once on my machine, the file concat.py combines the data into a single netCDF file.
+### Key Findings
+- Quantifies demand changes due to climate warming (1951-1980 baseline vs 2015-2024 recent period)
+- Calculates wholesale cost impacts using price-demand relationships
+- Provides seasonal and annual impact assessments by RTO
+- Generates comprehensive visualizations of climate impacts
 
-### RTO-average temperatures
-This code is in the directory '/RTO temp calc'. balancing_authority_temp.py calculates the population-weighted temperature of each region. These are stored in /weighted_temps.
+## Analysis Pipeline
 
-Shape files are downloaded from [the EIA website](https://atlas.eia.gov/datasets/eia::rto-regions/explore)
+### 1. Temperature Data Processing
+**Location**: `RTO temp calc/` directory
+- **Purpose**: Calculate population-weighted average temperatures for each RTO region
+- **Input**: ERA5 reanalysis temperature data, RTO shapefiles from EIA
+- **Output**: NetCDF files with daily temperature time series (`weighted_temps/`)
+- **Key Script**: `balancing_authority_temp.py`
 
-Note that this code writes out the average population-weighted temp for all sub-regions of the RTOs, but those are not used.
+### 2. Polynomial Demand-Temperature Modeling
+**Script**: `RTO_polynomial_fit.py`
+- **Purpose**: Fit polynomial relationships between temperature and electricity demand
+- **Features**:
+  - Supports 3rd and 4th degree polynomial fits
+  - Includes weekday/weekend effects
+  - Handles data filtering and outlier removal
+  - Generates diagnostic plots and fit statistics
+- **Input**: Demand data (EIA or GridStatus), temperature data
+- **Output**: JSON files with model coefficients (`polynomial_fits/`)
+- **Usage**: `python RTO_polynomial_fit.py` (configure year and degree in script)
 
-### Estimating the fit between RTOs and temperature
-This code is in RTO_polynomial_fit.py; it takes demand from the /demand directory and temperatures from the /weighted_temps and does the regression for each RTO. Note that you can set the degree of the polynomial. This program lets you set which year (2023, 2024) you're using for the fit and the degrees of the fit (cubic, 4th order, ...).
+### 3. Climate Change Impact Analysis
+**Script**: `RTO_climate_change_demand_impact.py`
+- **Purpose**: Project demand changes using temperature-demand models
+- **Analysis Periods**:
+  - Historical baseline: 1951-1980
+  - Recent period: 2015-2024
+- **Features**:
+  - Temperature clipping to model fit ranges
+  - Monthly and annual impact calculations
+  - Handles extrapolation warnings
+- **Output**: CSV files with demand changes (`climate_change_results/`)
+- **Usage**: `python RTO_climate_change_demand_impact.py` (configure parameters in script)
 
-It saves plots in the /plots directory and writes out the fit in the polynomial_fits_RTO_yyyy_degreeX.json file.
+### 4. Impact Visualization
+**Script**: `RTO_visualize_demand_changes.py`
+- **Purpose**: Generate comprehensive visualizations of climate impacts
+- **Outputs**:
+  - Heatmaps of monthly percentage changes
+  - Bar charts of annual changes by RTO
+  - Seasonal pattern line charts
+  - Combined multi-panel visualizations
+- **Location**: `climate_change_results/visualizations_YYYY_degreeX/`
+- **Usage**: `python RTO_visualize_demand_changes.py` (configure parameters in script)
 
-The demand and price data are from [the EIA website](https://www.eia.gov/electricity/wholesalemarkets/index.php). There are bash scripts in the /demand and /price directories to download the relevant files.
+## Data Sources and Downloads
 
-### GridStatus.io Data Downloads
-This project includes a code for downloading wholesale electricity price data from [gridstatus.io](https://gridstatus.io) for all major RTOs. The system provides an alternative data source to EIA.
+### GridStatus.io Integration
+The project includes a comprehensive system for downloading electricity market data from [gridstatus.io](https://gridstatus.io):
 
-#### Price Data Download System
-- **Main Script**: `download_rto_prices_gridstatus.py` - Python script for downloading day-ahead wholesale electricity prices
-- **Bash Wrapper**: `download_all_rto_prices.sh` - Enhanced wrapper with logging, error handling, and progress tracking
-- **Documentation**: `README_gridstatus_price_download.md` - Comprehensive documentation for the download system
+#### Price Data Download
+**Scripts**: 
+- `download_rto_prices_gridstatus.py` - Python download script
+- `download_all_rto_prices.sh` - Bash wrapper with logging
+- `README_gridstatus_price_download.md` - Detailed documentation
 
-#### Supported RTOs
-The system downloads price data for 7 major RTOs:
-- **CAISO** (California) - NP-15, SP-15, ZP-26 trading hub zones
+**Features**:
+- Downloads day-ahead wholesale prices for all 7 RTOs
+- Uses representative trading hubs/zones matching EIA data structure
+- Proper timezone handling for each RTO
+- Calculates RTO-wide averages from multiple locations
+- EIA-compatible CSV output format
+
+#### Demand Data Download  
+**Scripts**:
+- `download_rto_demand_gridstatus.py` - Python download script
+- `download_all_rto_demand.sh` - Bash wrapper with logging
+- `README_demand_download.md` - Detailed documentation
+
+**Features**:
+- Downloads actual load data using standardized GridStatus datasets
+- Timezone conversion to local RTO time
+- EIA-compatible format with proper headers
+
+### Supported RTOs
+- **CAISO** (California) - NP-15, SP-15, ZP-26 trading hubs
 - **ERCOT** (Texas) - Hub average pricing
-- **ISONE** (New England) - Internal hub + 8 load zones
-- **MISO** (Midwest) - 8 regional generation hubs
-- **NYISO** (New York) - 11 load zones (A through K)
-- **PJM** (Mid-Atlantic) - 19 utility generation hubs
+- **ISONE** (New England) - Internal hub + load zones
+- **MISO** (Midwest) - Regional generation hubs
+- **NYISO** (New York) - Load zones A through K
+- **PJM** (Mid-Atlantic) - Utility generation hubs
 - **SPP** (Southwest) - North and South trading hubs
 
-#### Key Features
-- **Representative Locations**: Uses specific hubs/zones that match EIA data structure rather than downloading all locations
-- **RTO Averages**: Calculates weighted averages across multiple locations for each RTO
-- **Timezone Handling**: Proper conversion to each RTO's local timezone
-- **EIA-Compatible Format**: Output CSV files match existing EIA data structure
-- **Comprehensive Logging**: Detailed logs with progress tracking and error handling
+## Price-Demand Analysis
 
-#### Output
-- Files saved to `gridstatus_price/` directory
-- Format: `{rto}_price_day_ahead_hr_{year}.csv`
-- Contains hourly day-ahead prices with proper headers and metadata
+### Daily Price-Demand Processing
+**Script**: `process_price_demand.py`
+- **Purpose**: Calculate demand-weighted daily average prices
+- **Features**:
+  - Matches price and demand files by RTO and year
+  - Calculates demand-weighted price averages
+  - Filters for complete 24-hour days
+  - Converts MW to GW for consistency
+- **Output**: `daily_price_demand_YYYY.csv`
 
-### Calculating the impact of climate change
-RTO_climate_change_impact.py creates the /climate_change_results folder and puts csv files into it containing average demand in baseline and current periods, as well as absolute and percent changes.
+### Price-Demand Relationship Modeling
+**Notebook**: `plot_price.ipynb`
+- **Purpose**: Analyze and model price-demand relationships
+- **Features**:
+  - Piecewise linear fits for price-demand curves
+  - Summer data focus (high demand periods)
+  - Smoothed relationship modeling
+- **Output**: `price_demand_pwlf_YYYY.json` contains the demand-price fits, visualization plots
 
-The program lets you select which fit json you're using to do the calculation.
+## Economic Impact Analysis
 
-Note: for temperatures below the minimum temp in the fit, the code replaces that temperature with the minimum temp and then uses that in the fit.
+### Total Cost Change Calculation
+**Script**: `calculate_total_cost_pwlf.py`
+- **Purpose**: Calculate total wholesale cost impacts of climate change
+- **Features**:
+  - Uses polynomial demand models and piecewise linear price models
+  - Analyzes summer months (June-September) when impacts are highest
+  - Compares baseline (1951-1980) vs recent (2015-2024) periods
+  - Provides results for multiple model configurations
+- **Analysis Parameters**:
+  - Years: 2023, 2024 (for model fitting)
+  - Polynomial degrees: 3, 4
+  - Focus: Summer wholesale cost changes
+- **Output**: Comprehensive cost impact tables in billions of dollars
 
-### Visualizing the changes
-visualize_RTO_demand_changes.py contains code to generate plots of the change, which are stored in /climate_change_results/visualizations folder
+## File Structure
 
-The program lets you select which fit json you're using to do the calculation.
+```
+├── README.md                              # This file
+├── RTO_polynomial_fit.py                  # Temperature-demand modeling
+├── RTO_climate_change_demand_impact.py    # Climate impact analysis
+├── RTO_visualize_demand_changes.py        # Impact visualization
+├── process_price_demand.py                # Price-demand data processing
+├── calculate_total_cost_pwlf.py           # Economic impact calculation
+├── download_rto_prices_gridstatus.py      # Price data download
+├── download_rto_demand_gridstatus.py      # Demand data download
+├── download_all_rto_prices.sh             # Price download wrapper
+├── download_all_rto_demand.sh             # Demand download wrapper
+├── plot_price.ipynb                       # Price analysis notebook
+├── polynomial_fits/                       # Model coefficients
+│   ├── polynomial_fits_RTO_2023_degree3.json
+│   ├── polynomial_fits_RTO_2023_degree4.json
+│   ├── polynomial_fits_RTO_2024_degree3.json
+│   └── polynomial_fits_RTO_2024_degree4.json
+├── climate_change_results/                # Impact analysis results
+│   ├── rto_demand_changes_percent_YYYY_degreeX.csv
+│   ├── rto_demand_changes_absolute_YYYY_degreeX.csv
+│   ├── rto_demand_baseline_YYYY_degreeX.csv
+│   ├── rto_demand_current_YYYY_degreeX.csv
+│   └── visualizations_YYYY_degreeX/       # Impact visualizations
+├── gridstatus_price/                      # Price data and analysis
+│   ├── *_price_day_ahead_hr_YYYY.csv      # Hourly price data
+│   ├── daily_price_demand_YYYY.csv        # Daily aggregated data
+│   └── price_demand_pwlf_YYYY.json        # Price-demand models
+├── gridstatus_demand/                     # Demand data
+│   └── *_load_act_hr_YYYY.csv             # Hourly demand data
+├── plots/                                 # Analysis visualizations
+├── RTO temp calc/                         # Temperature processing
+│   └── weighted_temps/                    # RTO temperature data
+└── era5/                                  # Raw temperature data
+```
 
-### Price vs. demand
-To calculate the relation between price and demand, process_price_demand.py calculates the demand-weighted price and demand (daily average) and writes them into a csv file (gridstatus_price/daily_price_demand_YYYY.csv).
+## Requirements
 
-plot_price.ipynb contains code to plot up the relationship. It also calculates a smoothed fit to the summer data, which is stored in gridstatus_price/price_demand_smooth.csv.
+### Python Dependencies
+```python
+pandas
+numpy
+xarray
+scikit-learn
+matplotlib
+seaborn
+gridstatusio  # For data downloads
+```
 
-### Total change in wholesale summer cost
-This is calculated in calculate_total_cost_change_pwlf.ipynb.
+### External Data
+- ERA5 reanalysis temperature data
+- RTO shapefiles from EIA
+- GridStatus.io API key (for data downloads)
 
-### August plots
-These are plots of Aug.-average price and demand, by hour. They show that prices spike in the afternoon/evening, when people are running their ACs. However, price maximizes around 8 pm in 2023 and 2024, suggesting that solar power is pushing the price peak to later in the evening.
+## Usage Examples
 
-### Older stuff
-'/RTO sub-region calculation' contains the code and some results for the calculation where we did the analysis for each sub-region
+### Run Complete Analysis Pipeline
+```bash
+# 1. Download data (requires API key)
+python download_rto_prices_gridstatus.py --year 2024 --api-key YOUR_KEY
+python download_rto_demand_gridstatus.py --year 2024 --api-key YOUR_KEY
+
+# 2. Fit temperature-demand models
+python RTO_polynomial_fit.py  # Configure year/degree in script
+
+# 3. Calculate climate impacts
+python RTO_climate_change_demand_impact.py  # Configure parameters in script
+
+# 4. Generate visualizations
+python RTO_visualize_demand_changes.py  # Configure parameters in script
+
+# 5. Process price-demand relationships
+python process_price_demand.py
+
+# 6. Calculate economic impacts
+python calculate_total_cost_pwlf.py
+```
+
+### Key Configuration Parameters
+Most scripts use internal configuration. Key parameters to modify:
+- **Year**: 2023 or 2024 (for model fitting)
+- **Polynomial degree**: 3 or 4
+- **Analysis periods**: Historical (1951-1980) vs Recent (2015-2024)
+- **Summer months**: June-September (6,7,8,9)
+
+## Analysis Results
+
+The analysis produces several types of outputs:
+
+1. **Demand Impact Tables**: Percentage and absolute changes in electricity demand
+2. **Economic Impact Analysis**: Wholesale cost changes in billions of dollars
+3. **Seasonal Patterns**: Monthly breakdown of climate impacts
+4. **Visualizations**: Heatmaps, bar charts, and trend analysis
+5. **Model Diagnostics**: Fit statistics and diagnostic plots
+
+## Documentation
+
+- `README_gridstatus_price_download.md` - Detailed price download documentation
+- `README_demand_download.md` - Detailed demand download documentation
+- Individual script docstrings provide implementation details
+
+## Notes
+
+- Temperature data requires significant preprocessing (see ERA5 processing notes in original README)
+- Model fits are specific to the training year and polynomial degree
+- Economic analysis focuses on summer months when climate impacts are most pronounced
+- All monetary values are in nominal dollars for the analysis year
