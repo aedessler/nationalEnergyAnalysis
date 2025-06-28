@@ -33,6 +33,9 @@ This analysis examines the relationship between temperature and electricity dema
 - **Output**: JSON files with model coefficients (`polynomial_fits/`)
 - **Usage**: `python RTO_polynomial_fit.py` (configure year and degree in script)
 
+the file `plot_polynomial_fits.ipynb` creates six-panel plots for the substack post
+the file `RTO_savgol_filter.py` is an abandoned effort to create a better fit between power and temperature
+
 ### 3. Climate Change Impact Analysis
 **Script**: `RTO_climate_change_demand_impact.py`
 - **Purpose**: Project demand changes using temperature-demand models
